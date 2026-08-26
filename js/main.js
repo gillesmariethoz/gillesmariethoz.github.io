@@ -39,6 +39,8 @@ function setupCarousel() {
   const track = document.getElementById("projects-grid");
   const prevBtn = document.getElementById("carousel-prev");
   const nextBtn = document.getElementById("carousel-next");
+  const fadeLeft = document.getElementById("carousel-fade-left");
+  const fadeRight = document.getElementById("carousel-fade-right");
   if (!track || !prevBtn || !nextBtn) return;
 
   let index = 0;
@@ -63,6 +65,8 @@ function setupCarousel() {
     track.style.transform = `translateX(-${index * step}px)`;
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index >= maxIndex();
+    if (fadeLeft) fadeLeft.classList.toggle("is-visible", index > 0);
+    if (fadeRight) fadeRight.classList.toggle("is-visible", index < maxIndex());
   }
 
   prevBtn.addEventListener("click", () => {
