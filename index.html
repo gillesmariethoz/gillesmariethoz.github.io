@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gilles Mariethoz · Ingénieur en systèmes industriels</title>
+<meta name="description" content="Portfolio de Gilles Mariethoz, ingénieur en systèmes industriels : conception mécanique, simulation et fabrication additive." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html#projets">Gilles Mariethoz</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Portfolio</p>
+        <h1>Gilles Mariethoz</h1>
+        <p class="hero-subtitle">Ingénieur en systèmes industriels / Mechanical Engineer</p>
+        <p class="hero-text">
+          Je conçois, simule et fabrique des pièces et systèmes mécaniques, de l'idée jusqu'aux essais,
+          avec un intérêt particulier pour l'optimisation de structures, la fabrication additive et les
+          véhicules de compétition.
+        </p>
+        <ul class="hero-skills">
+          <li>Conception mécanique</li>
+          <li>Simulation / matériaux</li>
+          <li>Fabrication additive</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="index.html#projets">Voir mes projets</a>
+          <a class="btn btn-secondary" href="cv.html">Mon CV</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/photo.png" alt="Photo de Gilles Mariethoz" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projets">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Projets</h2>
+          <p>Une sélection de projets d'ingénierie mécanique.</p>
+        </div>
+      </div>
+      <div class="carousel" id="projects-carousel">
+        <button class="carousel-arrow" id="carousel-prev" aria-label="Projet précédent">&#8592;</button>
+        <div class="carousel-viewport">
+          <div class="projects-grid" id="projects-grid">
+            <!-- Rempli automatiquement depuis js/data.js -->
+          </div>
+        </div>
+        <button class="carousel-arrow" id="carousel-next" aria-label="Projet suivant">&#8594;</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">
+          N'hésite pas à me contacter pour toute question ou opportunité.
+        </p>
+      </div>
+      <ul class="contact-links">
+        <li><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></li>
+        <li><a href="tel:+41799063654">079 906 36 54</a></li>
+        <li><a href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Gilles Mariethoz.
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

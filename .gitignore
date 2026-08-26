@@ -1,0 +1,4 @@
+# Dossiers de travail : photos brutes et documents sources
+# (les fichiers réellement utilisés par le site sont copiés dans assets/)
+/photo/
+/Doc/
