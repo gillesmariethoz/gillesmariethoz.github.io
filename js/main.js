@@ -69,15 +69,49 @@ function setupCarousel() {
     if (fadeRight) fadeRight.classList.toggle("is-visible", index < maxIndex());
   }
 
-  prevBtn.addEventListener("click", () => {
+  function goPrev() {
     index = Math.max(0, index - 1);
     update();
-  });
+  }
 
-  nextBtn.addEventListener("click", () => {
+  function goNext() {
     index = Math.min(maxIndex(), index + 1);
     update();
-  });
+  }
+
+  prevBtn.addEventListener("click", goPrev);
+  nextBtn.addEventListener("click", goNext);
+
+  /* Glissement tactile : on peut aussi passer au projet suivant/précédent
+     en glissant le doigt à gauche ou à droite sur le carrousel. */
+  const viewport = document.querySelector(".carousel-viewport");
+  if (viewport) {
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    viewport.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
+      },
+      { passive: true }
+    );
+
+    viewport.addEventListener(
+      "touchend",
+      (e) => {
+        const deltaX = e.changedTouches[0].clientX - touchStartX;
+        const deltaY = e.changedTouches[0].clientY - touchStartY;
+        const SWIPE_THRESHOLD = 40;
+        if (Math.abs(deltaX) > SWIPE_THRESHOLD && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX < 0) goNext();
+          else goPrev();
+        }
+      },
+      { passive: true }
+    );
+  }
 
   window.addEventListener("resize", update);
   update();
