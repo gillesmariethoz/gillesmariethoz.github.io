@@ -21,11 +21,13 @@
 }
 
 /* Mode sombre : s'active automatiquement si le visiteur a réglé son
-   navigateur/système en sombre. Il suffit de changer les couleurs
-   ici, tout le reste du site s'adapte automatiquement (car il utilise
-   les variables ci-dessus plutôt que des couleurs fixes). */
+   navigateur/système en sombre, sauf s'il a choisi "clair" à la main
+   avec le bouton soleil/lune (data-theme="light" ci-dessous). Il
+   suffit de changer les couleurs ici, tout le reste du site s'adapte
+   automatiquement (car il utilise les variables ci-dessus plutôt que
+   des couleurs fixes). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0f1115;
     --bg-alt: #1a1d23;
     --bg-card: #1a1d23;
@@ -37,6 +39,20 @@
     --header-bg: rgba(15, 17, 21, 0.92);
     --tag-bg: rgba(107, 163, 214, 0.16);
   }
+}
+
+/* Le visiteur a choisi "sombre" à la main, même si son système est en clair */
+:root[data-theme="dark"] {
+  --bg: #0f1115;
+  --bg-alt: #1a1d23;
+  --bg-card: #1a1d23;
+  --text: #f1f2f4;
+  --text-secondary: #9aa0a8;
+  --border: #2a2e35;
+  --accent: #6ba3d6;
+  --accent-dark: #8fbde5;
+  --header-bg: rgba(15, 17, 21, 0.92);
+  --tag-bg: rgba(107, 163, 214, 0.16);
 }
 
 * {
@@ -125,6 +141,64 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  flex: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.theme-toggle .icon-moon {
+  display: block;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+/* Système réglé en sombre, et le visiteur n'a rien choisi manuellement */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: block;
+  }
+}
+
+/* Le visiteur a choisi manuellement, via le bouton */
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+:root[data-theme="light"] .theme-toggle .icon-moon {
+  display: block;
+}
+:root[data-theme="light"] .theme-toggle .icon-sun {
+  display: none;
 }
 
 /* ---------- Hero ---------- */
