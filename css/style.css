@@ -776,6 +776,42 @@ a {
   color: var(--text);
 }
 
+/* ---------- Page 404 ---------- */
+
+.not-found {
+  padding: 96px 0 120px;
+  text-align: center;
+}
+
+.not-found-code {
+  font-size: clamp(6rem, 20vw, 11rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 8px;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.not-found h1 {
+  margin: 0 0 16px;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.not-found-text {
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin: 0 auto 32px;
+  font-size: 1.05rem;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 860px) {
