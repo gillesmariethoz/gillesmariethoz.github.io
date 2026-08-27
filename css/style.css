@@ -402,7 +402,7 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   .feature.flip .feature-fig,
   .feature .feature-fig { order: 2; }
   .proj-body { grid-template-columns: 1fr; gap: 28px; }
-  .toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 18px; }
+  .toc { position: static; flex-direction: column; gap: 11px; }
 }
 
 @media (max-width: 1140px) {
