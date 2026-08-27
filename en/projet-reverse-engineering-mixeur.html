@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reverse Engineering a Hand Blender · Gilles Mariethoz</title>
+<meta name="description" content="Reverse-engineering analysis of a Tristar BL-4431 hand blender: materials, loads, costs and safety." />
+<meta property="og:title" content="Reverse Engineering a Hand Blender · Gilles Mariethoz" />
+<meta property="og:description" content="Reverse-engineering analysis of a Tristar BL-4431 hand blender: materials, loads, costs and safety." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/projects/reverse-engineering-mixeur/cover.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/en/projet-reverse-engineering-mixeur.html" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/projet-reverse-engineering-mixeur.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../en/index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="../en/index.html#travaux">Selected work</a>
+      <a href="../en/index.html#autres">Other projects</a>
+      <a href="../en/cv.html">CV</a>
+      <a href="../en/index.html#contact">Contact</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Light</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Dark</button>
+    </div>
+    <div class="switch">
+      <a href="../projet-reverse-engineering-mixeur.html">FR</a>
+      <span class="sep">/</span>
+      <span class="on">EN</span>
+      <span class="sep">/</span>
+      <a href="../de/projet-reverse-engineering-mixeur.html">DE</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs lbl">
+    <a href="../en/index.html#travaux">← Selected work</a>
+    <span class="dot">/</span>
+    <span>Sheet 08</span>
+  </p>
+
+  <section class="proj-head">
+    <div>
+      <p class="feature-meta">
+        <span class="feature-num">08</span>
+        <span class="lbl">Reverse Engineering Course, HES-SO Valais-Wallis, 3rd year, semester 4</span>
+      </p>
+      <h1>Reverse Engineering a Hand Blender</h1>
+      <p class="lede">Reverse-engineering analysis of a Tristar BL-4431 hand blender: materials, loads, costs and safety.</p>
+    </div>
+    <div class="proj-docs">
+      <p class="lbl lbl-sm">Skills</p>
+      <div class="tags">
+            <span class="tag">Reverse engineering</span>
+            <span class="tag">Materials analysis</span>
+            <span class="tag">Safety analysis</span>
+            <span class="tag">Granta</span>
+          </div>
+    </div>
+  </section>
+
+  <figure class="proj-hero frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <img src="../assets/projects/reverse-engineering-mixeur/cover.jpg" alt="Reverse Engineering a Hand Blender" />
+  </figure>
+  <p class="figcap lbl lbl-sm"><span>Fig. 01</span><span>Reverse engineering</span></p>
+
+  <section class="spec frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <p class="spec-title lbl lbl-sm">Specifications</p>
+    <div class="spec-grid" data-cells="8">
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Product</p>
+        <p class="spec-val">Tristar BL-4431</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Motor</p>
+        <p class="spec-val">180 W</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Alloy</p>
+        <p class="spec-val">Zamak ZA-8</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Hardness</p>
+        <p class="spec-val">Shore A 60</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Unit cost</p>
+        <p class="spec-val">1,90 CHF</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Methods</p>
+        <p class="spec-val">DSC · MEB</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Software</p>
+        <p class="spec-val acc">Granta</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Team</p>
+        <p class="spec-val">2</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="proj-body">
+    <nav class="toc">
+      <p class="lbl lbl-sm">Contents</p>
+      <a href="#s1">01 — The product</a>
+      <a href="#s2">02 — Materials analysis</a>
+      <a href="#s3">03 — Loads and costs</a>
+      <a href="#s4">04 — Safety analysis</a>
+      <a href="#s5">05 — Diagnosis and improvements</a>
+    </nav>
+
+    <div class="sections">
+
+      <section class="sec" id="s1">
+        <div class="sec-title">
+          <span class="sec-num">01</span>
+          <h2>The product</h2>
+        </div>
+        <p>Study of a Tristar BL-4431 hand blender, compact, designed for 1 or 2 people, with a detachable 450 ml container and a 180 W 2-speed motor. Project carried out with Kevin Pernet. After establishing its functional diagram, three particularly interesting parts were selected for analysis: the blade, the bearing on the blade side, and an elastomer injection-molded around a metal part.</p>
+      </section>
+
+      <section class="sec" id="s2">
+        <div class="sec-title">
+          <span class="sec-num">02</span>
+          <h2>Materials analysis</h2>
+        </div>
+        <p>The elastomer was characterized with a Shore A hardness measured around 60 (expected range 53-66), a density of 1100 to 1300 kg/m³ and a glass transition temperature of around -120 to -125°C (measured by DSC). The metal part, initially assumed to be aluminum, turned out to be injection-molded Zamak (ZA-8 zinc-aluminum alloy), confirmed by electron microscopy.</p>
+      </section>
+
+      <section class="sec" id="s3">
+        <div class="sec-title">
+          <span class="sec-num">03</span>
+          <h2>Loads and costs</h2>
+        </div>
+        <p>The load-path analysis showed stresses on the order of 2 MPa. The cost analysis, carried out with Granta software, estimated the injection-molded Zamak part at around CHF 1.90, the threading at CHF 0.01, and the elastomer injection-molded around the Zamak part at around CHF 0.66.</p>
+      </section>
+
+      <section class="sec" id="s4">
+        <div class="sec-title">
+          <span class="sec-num">04</span>
+          <h2>Safety analysis</h2>
+        </div>
+        <p>A risk analysis (fault-tree type) was carried out: electrocution risk estimated at around 1 in 72,000 (defective internal insulation or damaged cable, combined with use in a wet environment), blade injury risk at around 1 in 125,000 (defective blade fixation combined with user misuse), and fire risk at around 1 in 48,000 (internal short circuit due to motor overheating, combined with mechanical jamming during prolonged use).</p>
+      </section>
+
+      <section class="sec" id="s5">
+        <div class="sec-title">
+          <span class="sec-num">05</span>
+          <h2>Diagnosis and improvements</h2>
+        </div>
+        <p>The damping elastomer offers several advantages: reduced vibration, shock protection, noise reduction and safety in case of overload. On the other hand, it increases cost and production time, wears over time, exposes the zinc to a corrosion risk, and remains weaker under abuse. Proposed improvements: switch to a single-part manufacturing process, improve the blade, revise the wiring, reduce pivot noise, and improve ventilation against overheating.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <nav class="prevnext">
+    <a href="projet-cfd-naca0015.html">
+      <span class="lbl lbl-sm">← Previous sheet</span>
+      <strong>Flow Study Around a NACA 0015 Airfoil</strong>
+    </a>
+    <a href="projet-decoupe-connecteurs.html">
+      <span class="lbl lbl-sm">Next sheet →</span>
+      <strong>Connector Strip Cutting Machine</strong>
+    </a>
+  </nav>
+
+  <div class="titleblock proj-titleblock lbl lbl-sm">
+    <div>Sheet 08 / 12</div>
+    <div>2026 ed. · EN</div>
+    <div><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></div>
+    <div>© 2026 G. Mariethoz</div>
+  </div>
+
+</main>
+
+<script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

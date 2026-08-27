@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Étude de l'écoulement autour d'un profil NACA 0015 · Gilles Mariethoz</title>
+<meta name="description" content="Simulation numérique de l'écoulement autour d'un profil NACA 0015, avec analyse du décrochage à différents angles d'attaque." />
+<meta property="og:title" content="Étude de l'écoulement autour d'un profil NACA 0015 · Gilles Mariethoz" />
+<meta property="og:description" content="Simulation numérique de l'écoulement autour d'un profil NACA 0015, avec analyse du décrochage à différents angles d'attaque." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/projects/cfd-naca0015/cover.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/projet-cfd-naca0015.html" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/projet-cfd-naca0015.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#travaux">Travaux</a>
+      <a href="index.html#autres">Autres projets</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Clair</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Sombre</button>
+    </div>
+    <div class="switch">
+      <span class="on">FR</span>
+      <span class="sep">/</span>
+      <a href="en/projet-cfd-naca0015.html">EN</a>
+      <span class="sep">/</span>
+      <a href="de/projet-cfd-naca0015.html">DE</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs lbl">
+    <a href="index.html#travaux">← Travaux</a>
+    <span class="dot">/</span>
+    <span>Planche 07</span>
+  </p>
+
+  <section class="proj-head">
+    <div>
+      <p class="feature-meta">
+        <span class="feature-num">07</span>
+        <span class="lbl">Cours CFD, HES-SO Valais-Wallis, 3ᵉ année, semestre 4</span>
+      </p>
+      <h1>Étude de l'écoulement autour d'un profil NACA 0015</h1>
+      <p class="lede">Simulation numérique de l'écoulement autour d'un profil NACA 0015, avec analyse du décrochage à différents angles d'attaque.</p>
+    </div>
+    <div class="proj-docs">
+      <p class="lbl lbl-sm">Compétences</p>
+      <div class="tags">
+            <span class="tag">CFD</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">JavaFoil</span>
+            <span class="tag">Simulation</span>
+          </div>
+    </div>
+  </section>
+
+  <figure class="proj-hero frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <img src="assets/projects/cfd-naca0015/cover.jpg" alt="Étude de l'écoulement autour d'un profil NACA 0015" />
+  </figure>
+  <p class="figcap lbl lbl-sm"><span>Fig. 01</span><span>CFD</span></p>
+
+  <section class="spec frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <p class="spec-title lbl lbl-sm">Fiche technique</p>
+    <div class="spec-grid" data-cells="4">
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Profil</p>
+        <p class="spec-val acc">NACA 0015</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Logiciels</p>
+        <p class="spec-val">ANSYS · JavaFoil</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Fluide</p>
+        <p class="spec-val">H₂O</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Année</p>
+        <p class="spec-val">2025</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="proj-body">
+    <nav class="toc">
+      <p class="lbl lbl-sm">Sommaire</p>
+      <a href="#s1">01 — Le projet</a>
+      <a href="#s2">02 — Résultats</a>
+      <a href="#s3">03 — Conclusion</a>
+      <a href="#s4">04 — Ce que j'ai appris</a>
+    </nav>
+
+    <div class="sections">
+
+      <section class="sec" id="s1">
+        <div class="sec-title">
+          <span class="sec-num">01</span>
+          <h2>Le projet</h2>
+        </div>
+        <p>Projet mené en deux parties. La première partie a consisté à simuler l'écoulement d'eau autour d'un profil NACA 0015 à 0° d'angle d'attaque, afin de valider le modèle numérique, la portance, la traînée et le comportement de l'écoulement. La seconde partie a étendu l'étude à différents angles d'attaque, en analysant l'évolution de la portance, de la traînée et des caractéristiques de l'écoulement, jusqu'au décrochage et à la séparation de l'écoulement aux angles élevés.</p>
+      </section>
+
+      <section class="sec" id="s2">
+        <div class="sec-title">
+          <span class="sec-num">02</span>
+          <h2>Résultats</h2>
+        </div>
+        <p>La convergence des simulations et la qualité du maillage ont été vérifiées. Les coefficients de portance et de traînée obtenus correspondaient aux attentes et aux simulations de référence. Les champs de pression, de frottement et de vitesse étaient cohérents avec le comportement théorique attendu, et le décrochage ainsi que la séparation de l'écoulement ont bien été observés aux angles d'attaque élevés.</p>
+      </section>
+
+      <section class="sec" id="s3">
+        <div class="sec-title">
+          <span class="sec-num">03</span>
+          <h2>Conclusion</h2>
+        </div>
+        <p>Ce projet a démontré la fiabilité du modèle numérique pour un écoulement stationnaire autour d'un profil symétrique, et a permis de mieux comprendre l'effet de l'angle d'attaque. Pistes d'amélioration identifiées : affiner le maillage près du profil et utiliser un modèle de transition laminaire-turbulent pour des prédictions de frottement plus précises. Outils utilisés : ANSYS, JavaFoil.</p>
+      </section>
+
+      <section class="sec" id="s4">
+        <div class="sec-title">
+          <span class="sec-num">04</span>
+          <h2>Ce que j'ai appris</h2>
+        </div>
+        <p>Ce projet m'a permis d'apprendre à simuler un écoulement et, plus largement, de me construire une bonne base en mécanique des fluides numérique (CFD).</p>
+      </section>
+
+    </div>
+  </div>
+
+  <nav class="prevnext">
+    <a href="projet-alpinea-vrt.html">
+      <span class="lbl lbl-sm">← Planche précédente</span>
+      <strong>Alpinea · Formula Student VRT</strong>
+    </a>
+    <a href="projet-reverse-engineering-mixeur.html">
+      <span class="lbl lbl-sm">Planche suivante →</span>
+      <strong>Reverse engineering d'un mixeur plongeant</strong>
+    </a>
+  </nav>
+
+  <div class="titleblock proj-titleblock lbl lbl-sm">
+    <div>Planche 07 / 12</div>
+    <div>Éd. 2026 · FR</div>
+    <div><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></div>
+    <div>© 2026 G. Mariethoz</div>
+  </div>
+
+</main>
+
+<script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

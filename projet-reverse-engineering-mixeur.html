@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reverse engineering d'un mixeur plongeant · Gilles Mariethoz</title>
+<meta name="description" content="Analyse par rétro-ingénierie d'un mixeur plongeant Tristar BL-4431 : matériaux, efforts, coûts et sécurité." />
+<meta property="og:title" content="Reverse engineering d'un mixeur plongeant · Gilles Mariethoz" />
+<meta property="og:description" content="Analyse par rétro-ingénierie d'un mixeur plongeant Tristar BL-4431 : matériaux, efforts, coûts et sécurité." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/projects/reverse-engineering-mixeur/cover.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/projet-reverse-engineering-mixeur.html" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/projet-reverse-engineering-mixeur.html" />
+<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/projet-reverse-engineering-mixeur.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#travaux">Travaux</a>
+      <a href="index.html#autres">Autres projets</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Clair</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Sombre</button>
+    </div>
+    <div class="switch">
+      <span class="on">FR</span>
+      <span class="sep">/</span>
+      <a href="en/projet-reverse-engineering-mixeur.html">EN</a>
+      <span class="sep">/</span>
+      <a href="de/projet-reverse-engineering-mixeur.html">DE</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs lbl">
+    <a href="index.html#travaux">← Travaux</a>
+    <span class="dot">/</span>
+    <span>Planche 08</span>
+  </p>
+
+  <section class="proj-head">
+    <div>
+      <p class="feature-meta">
+        <span class="feature-num">08</span>
+        <span class="lbl">Cours Reverse Engineering, HES-SO Valais-Wallis, 3ᵉ année, semestre 4</span>
+      </p>
+      <h1>Reverse engineering d'un mixeur plongeant</h1>
+      <p class="lede">Analyse par rétro-ingénierie d'un mixeur plongeant Tristar BL-4431 : matériaux, efforts, coûts et sécurité.</p>
+    </div>
+    <div class="proj-docs">
+      <p class="lbl lbl-sm">Compétences</p>
+      <div class="tags">
+            <span class="tag">Reverse engineering</span>
+            <span class="tag">Analyse matériaux</span>
+            <span class="tag">Analyse de sécurité</span>
+            <span class="tag">Granta</span>
+          </div>
+    </div>
+  </section>
+
+  <figure class="proj-hero frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <img src="assets/projects/reverse-engineering-mixeur/cover.jpg" alt="Reverse engineering d'un mixeur plongeant" />
+  </figure>
+  <p class="figcap lbl lbl-sm"><span>Fig. 01</span><span>Reverse engineering</span></p>
+
+  <section class="spec frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <p class="spec-title lbl lbl-sm">Fiche technique</p>
+    <div class="spec-grid" data-cells="8">
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Produit</p>
+        <p class="spec-val">Tristar BL-4431</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Moteur</p>
+        <p class="spec-val">180 W</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Alliage</p>
+        <p class="spec-val">Zamak ZA-8</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Dureté</p>
+        <p class="spec-val">Shore A 60</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Coût pièce</p>
+        <p class="spec-val">1,90 CHF</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Méthodes</p>
+        <p class="spec-val">DSC · MEB</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Logiciels</p>
+        <p class="spec-val acc">Granta</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Équipe</p>
+        <p class="spec-val">2</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="proj-body">
+    <nav class="toc">
+      <p class="lbl lbl-sm">Sommaire</p>
+      <a href="#s1">01 — Le produit</a>
+      <a href="#s2">02 — Analyse des matériaux</a>
+      <a href="#s3">03 — Efforts et coûts</a>
+      <a href="#s4">04 — Analyse de sécurité</a>
+      <a href="#s5">05 — Diagnostic et améliorations</a>
+    </nav>
+
+    <div class="sections">
+
+      <section class="sec" id="s1">
+        <div class="sec-title">
+          <span class="sec-num">01</span>
+          <h2>Le produit</h2>
+        </div>
+        <p>Étude d'un mixeur plongeant Tristar BL-4431, compact, pensé pour 1 ou 2 personnes, avec bol détachable de 450 ml et moteur 180 W à 2 vitesses. Projet réalisé avec Kevin Pernet. Après avoir établi son schéma fonctionnel, trois pièces particulièrement intéressantes ont été sélectionnées pour l'analyse : la lame, le palier côté lame et un élastomère injecté autour d'une pièce métallique.</p>
+      </section>
+
+      <section class="sec" id="s2">
+        <div class="sec-title">
+          <span class="sec-num">02</span>
+          <h2>Analyse des matériaux</h2>
+        </div>
+        <p>L'élastomère a été caractérisé avec une dureté Shore A mesurée autour de 60 (plage attendue 53-66), une densité de 1100 à 1300 kg/m³ et une température de transition vitreuse d'environ -120 à -125°C (mesurée par DSC). La pièce métallique, d'abord supposée en aluminium, s'est révélée être en Zamak (alliage zinc-aluminium ZA-8) injecté, confirmé par microscopie électronique.</p>
+      </section>
+
+      <section class="sec" id="s3">
+        <div class="sec-title">
+          <span class="sec-num">03</span>
+          <h2>Efforts et coûts</h2>
+        </div>
+        <p>L'analyse de la boucle des efforts a montré des contraintes de l'ordre de 2 MPa. L'analyse de coût, réalisée avec le logiciel Granta, a estimé la pièce en Zamak injecté à environ 1,90 CHF, le taraudage à 0,01 CHF, et l'élastomère injecté autour de la pièce en Zamak à environ 0,66 CHF.</p>
+      </section>
+
+      <section class="sec" id="s4">
+        <div class="sec-title">
+          <span class="sec-num">04</span>
+          <h2>Analyse de sécurité</h2>
+        </div>
+        <p>Une analyse des risques (type arbre de défaillance) a été menée : risque d'électrocution estimé à environ 1 sur 72 000 (isolation interne défectueuse ou câble endommagé, combiné à une utilisation en milieu humide), risque de blessure par les lames à environ 1 sur 125 000 (fixation de lame défectueuse combinée à une mauvaise utilisation), et risque d'incendie à environ 1 sur 48 000 (court-circuit interne dû à une surchauffe du moteur, combiné à un blocage mécanique lors d'une utilisation prolongée).</p>
+      </section>
+
+      <section class="sec" id="s5">
+        <div class="sec-title">
+          <span class="sec-num">05</span>
+          <h2>Diagnostic et améliorations</h2>
+        </div>
+        <p>L'élastomère amortisseur présente plusieurs avantages : réduction des vibrations, protection contre les à-coups, réduction du bruit et sécurité en cas de surcharge. En contrepartie, il augmente le coût et le temps de production, s'use avec le temps, expose le zinc à un risque de corrosion et reste plus faible en cas d'abus. Pistes d'amélioration proposées : passer à un procédé de fabrication en une seule pièce, améliorer la lame, revoir le câblage, réduire le bruit du pivot et améliorer la ventilation contre la surchauffe.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <nav class="prevnext">
+    <a href="projet-cfd-naca0015.html">
+      <span class="lbl lbl-sm">← Planche précédente</span>
+      <strong>Étude de l'écoulement autour d'un profil NACA 0015</strong>
+    </a>
+    <a href="projet-decoupe-connecteurs.html">
+      <span class="lbl lbl-sm">Planche suivante →</span>
+      <strong>Machine de découpe de barrettes de connecteur</strong>
+    </a>
+  </nav>
+
+  <div class="titleblock proj-titleblock lbl lbl-sm">
+    <div>Planche 08 / 12</div>
+    <div>Éd. 2026 · FR</div>
+    <div><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></div>
+    <div>© 2026 G. Mariethoz</div>
+  </div>
+
+</main>
+
+<script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

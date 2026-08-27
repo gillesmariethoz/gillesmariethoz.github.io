@@ -3,134 +3,421 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gilles Mariethoz · Mechanical Engineer</title>
-<meta name="description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, simulation and additive manufacturing." />
-<meta property="og:title" content="Gilles Mariethoz · Mechanical Engineer" />
-<meta property="og:description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, simulation and additive manufacturing." />
+<title>Gilles Mariethoz · Industrial Systems Engineer</title>
+<meta name="description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, finite element simulation and metal additive manufacturing." />
+<meta property="og:title" content="Gilles Mariethoz · Industrial Systems Engineer" />
+<meta property="og:description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, finite element simulation and metal additive manufacturing." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="../assets/photo.png" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/portrait.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/en/" />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/" />
-<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/" />
-<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/" />
-<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/" />
+<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/index.html" />
+<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/index.html" />
+<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/index.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../css/style.css" />
-<script>
-  (function () {
-    var saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") {
-      document.documentElement.setAttribute("data-theme", saved);
-    }
-  })();
-</script>
+<script src="../js/theme.js"></script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="index.html">Gilles Mariethoz</a>
-    <div class="header-actions">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html#projets">Projects</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="lang-switch">
-        <a href="../index.html">FR</a>
-        <span class="sep">·</span>
-        <span class="active">EN</span>
-        <span class="sep">·</span>
-        <a href="../de/index.html">DE</a>
-      </div>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-      </button>
-      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../en/index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#travaux">Selected work</a>
+      <a href="index.html#autres">Other projects</a>
+      <a href="../en/cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Light</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Dark</button>
     </div>
+    <div class="switch">
+      <a href="../index.html">FR</a>
+      <span class="sep">/</span>
+      <span class="on">EN</span>
+      <span class="sep">/</span>
+      <a href="../de/index.html">DE</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
   </div>
 </header>
 
 <main>
+
   <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-eyebrow">Portfolio</p>
-        <h1>Gilles Mariethoz</h1>
-        <p class="hero-subtitle">Industrial Systems Engineer / Mechanical Engineer</p>
-        <p class="hero-text">
-          I design, simulate and manufacture mechanical parts and systems, from concept through testing,
-          with a particular interest in structural optimization, additive manufacturing and racing
-          vehicles.
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <div>
+        <p class="eyebrow lbl">
+          <span class="rule"></span>
+          <span>Portfolio</span>
+          <span class="dot">·</span>
+          <span>2026 edition</span>
         </p>
-        <ul class="hero-skills">
-          <li>Mechanical design</li>
-          <li>Simulation / materials</li>
-          <li>Additive manufacturing</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="index.html#projets">See my projects</a>
-          <a class="btn btn-secondary" href="cv.html">My CV</a>
+        <h1>Gilles<br />Mariethoz</h1>
+        <div class="divide"></div>
+        <p class="statement">From simulation to the printed part.</p>
+        <p class="lede">Industrial systems engineer, specialised in mechanical design, finite element simulation and metal additive manufacturing. I take a project from the analysis of the need through to physical testing — and I go after the measured result, not just the model.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#travaux">See the work <span aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="../en/cv.html">Curriculum vitae</a>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="../assets/photo.png" alt="Photo of Gilles Mariethoz" />
+        <figure class="frame">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <img src="../assets/portrait.jpg" alt="Portrait of Gilles Mariethoz" />
+        </figure>
+        <p class="figcap lbl lbl-sm"><span>Fig. 01 — Portrait</span><span>Scale 1:1</span></p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="projets">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2>Projects</h2>
-          <p>A selection of mechanical engineering projects.</p>
+  <section class="wrap">
+    <div class="plate frame">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div class="plate-grid">
+        <div class="plate-cell">
+          <p class="plate-num">12</p>
+          <p class="plate-txt">documented engineering projects, from the workshop to the lab</p>
+        </div>
+        <div class="plate-cell">
+          <p class="plate-num">3</p>
+          <p class="plate-txt">engineering contests won against the other teams</p>
+        </div>
+        <div class="plate-cell">
+          <p class="plate-num">2</p>
+          <p class="plate-txt">Formula Student cars — HV2 / HV3 certified, cleared to work on high-voltage systems</p>
+        </div>
+        <div class="plate-cell">
+          <p class="plate-num">5</p>
+          <p class="plate-txt">years on the shop floor as a polymechanic apprentice before university</p>
         </div>
       </div>
-      <div class="carousel" id="projects-carousel">
-        <button class="carousel-arrow" id="carousel-prev" aria-label="Previous project">&#8592;</button>
-        <div class="carousel-viewport">
-          <div class="carousel-fade carousel-fade-left" id="carousel-fade-left"></div>
-          <div class="carousel-fade carousel-fade-right" id="carousel-fade-right"></div>
-          <div class="projects-grid" id="projects-grid">
-            <!-- Automatically filled from ../js/data.en.js -->
+    </div>
+  </section>
+
+  <section class="wrap sec-pad" id="travaux">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <span class="rule"></span>
+      <span class="lbl">3 / 12</span>
+    </div>
+    <p class="sec-intro">The three projects that best describe how I work: a research thesis, a device built end to end, and a team project under time pressure.</p>
+
+    <div class="features">
+
+      <article class="feature">
+        <div class="feature-body">
+          <p class="feature-meta">
+            <span class="feature-num">01</span>
+            <span class="lbl">Bachelor Thesis, HES-SO Valais-Wallis, Industrial Systems program, 2026 edition</span>
+          </p>
+          <h3>Generative Design and Manufacturing of a Bio-Inspired Bone-Structured Prosthesis</h3>
+          <p>Bio-inspired femoral prosthesis with TPMS structures, combining generative design and LPBF additive manufacturing in Ti6Al4V.</p>
+          <div class="result">
+            <p class="lbl lbl-sm">Result</p>
+            <p class="result-val">16 to 18 ×</p>
+            <p class="result-txt">actual stiffness measured 16 to 18 times higher than the numerical predictions, a gap attributed to the compliance of the setup, idealized boundary conditions, and printing defects.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">LPBF</span>
+            <span class="tag">Ti6Al4V</span>
+            <span class="tag">TPMS</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="doclinks">
+            <a class="doclink" href="projet-tpms.html">See the full sheet <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <button class="carousel-arrow" id="carousel-next" aria-label="Next project">&#8594;</button>
+        <div class="feature-fig">
+          <figure class="frame">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <img src="../assets/projects/tpms/cover.jpg" alt="Generative Design and Manufacturing of a Bio-Inspired Bone-Structured Prosthesis" loading="lazy" />
+          </figure>
+          <p class="figcap lbl lbl-sm"><span>Fig. — Specimens Ø8 × 14 mm</span><span>Ti6Al4V / LPBF</span></p>
+        </div>
+      </article>
+
+      <article class="feature flip">
+        <div class="feature-body">
+          <p class="feature-meta">
+            <span class="feature-num">02</span>
+            <span class="lbl">PI Project, 3rd year, Bachelor in Industrial Systems</span>
+          </p>
+          <h3>Magnetic Levitation via Superconductivity</h3>
+          <p>Magnetic levitation device using superconductivity, designed and built end-to-end during the Bachelor's program.</p>
+          <div class="result">
+            <p class="lbl lbl-sm">Result</p>
+            <p class="result-val">Working device</p>
+            <p class="result-txt">built end to end, combining applied physics, electronics and control. The work was covered by HES-SO Valais-Wallis.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Applied physics</span>
+            <span class="tag">Electronics</span>
+            <span class="tag">Control</span>
+            <span class="tag">Superconductivity</span>
+          </div>
+          <div class="doclinks">
+            <a class="doclink" href="projet-levitation-magnetique.html">See the full sheet <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="feature-fig">
+          <figure class="frame">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <img src="../assets/projects/levitation-magnetique/cover.jpg" alt="Magnetic Levitation via Superconductivity" loading="lazy" />
+          </figure>
+          <p class="figcap lbl lbl-sm"><span>Fig. — Magnetic circuit rails</span><span>Liquid nitrogen</span></p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-body">
+          <p class="feature-meta">
+            <span class="feature-num">03</span>
+            <span class="lbl">HEPIA · 2023 · First-year project</span>
+          </p>
+          <h3>Sugarland · HEPIA Robot Contest</h3>
+          <p>Fully autonomous robot, winner of the time-performance award at the 2023 HEPIA Robot Contest, tasked with clearing a candlelit dinner table.</p>
+          <div class="result">
+            <p class="lbl lbl-sm">Result</p>
+            <p class="result-val">Time-performance award</p>
+            <p class="result-txt">won on time performance, while also placing well in technical design and aesthetics. Covered by 20 minutes and streamed live by HEPIA.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Robotics</span>
+            <span class="tag">Mechanical design</span>
+            <span class="tag">Autonomy</span>
+            <span class="tag">HEPIA</span>
+          </div>
+          <div class="doclinks">
+            <a class="doclink" href="projet-robot-hepia.html">See the full sheet <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="feature-fig">
+          <figure class="frame">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <img src="../assets/projects/robot-hepia/cover.jpg" alt="Sugarland · HEPIA Robot Contest" loading="lazy" />
+          </figure>
+          <p class="figcap lbl lbl-sm"><span>Fig. — Sugarland</span><span>Team of 5</span></p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="wrap sec-pad" id="autres">
+    <div class="sec-head">
+      <h2>The other projects</h2>
+      <span class="rule"></span>
+      <span class="lbl">04 — 12</span>
+    </div>
+    <p class="sec-intro">The rest of the work. Each entry opens its own sheet: context, approach, results and documents.</p>
+
+    <div class="list">
+
+      <a class="list-row" href="projet-lanceur-balles-golf.html">
+        <span class="list-num">04</span>
+        <span class="list-thumb"><img src="../assets/projects/lanceur-balles-golf/cover.jpg" alt="Golf Ball Launcher" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Golf Ball Launcher</span>
+          <span class="lbl lbl-sm">Mechanical Project, HES-SO Valais-Wallis, September 2024 to May 2025</span>
+        </span>
+        <span class="list-blurb">Pneumatically-powered golf ball launcher, designed in a two-person team and winner of the competition against the other teams.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-bella-lui-vrt.html">
+        <span class="list-num">05</span>
+        <span class="list-thumb"><img src="../assets/projects/bella-lui-vrt/cover.jpg" alt="Bella Lui · VRT Formula Student" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Bella Lui · VRT Formula Student</span>
+          <span class="lbl lbl-sm">VRT (Valais Racing Team) · 2023-2024</span>
+        </span>
+        <span class="list-blurb">VRT's Formula Student electric car: designed the TSAC (accumulator container) within the Mechanical Team.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-alpinea-vrt.html">
+        <span class="list-num">06</span>
+        <span class="list-thumb"><img src="../assets/projects/alpinea-vrt/cover.jpg" alt="Alpinea · VRT Formula Student" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Alpinea · VRT Formula Student</span>
+          <span class="lbl lbl-sm">VRT (Valais Racing Team) · 2nd year, 2024-2025</span>
+        </span>
+        <span class="list-blurb">VRT's third electric single-seater: safety simulations, CAD training and support for the Mechanical Team.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-cfd-naca0015.html">
+        <span class="list-num">07</span>
+        <span class="list-thumb"><img src="../assets/projects/cfd-naca0015/cover.jpg" alt="Flow Study Around a NACA 0015 Airfoil" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Flow Study Around a NACA 0015 Airfoil</span>
+          <span class="lbl lbl-sm">CFD Course, HES-SO Valais-Wallis, 3rd year, semester 4</span>
+        </span>
+        <span class="list-blurb">Numerical simulation of flow around a NACA 0015 airfoil, with stall analysis at different angles of attack.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-reverse-engineering-mixeur.html">
+        <span class="list-num">08</span>
+        <span class="list-thumb"><img src="../assets/projects/reverse-engineering-mixeur/cover.jpg" alt="Reverse Engineering a Hand Blender" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Reverse Engineering a Hand Blender</span>
+          <span class="lbl lbl-sm">Reverse Engineering Course, HES-SO Valais-Wallis, 3rd year, semester 4</span>
+        </span>
+        <span class="list-blurb">Reverse-engineering analysis of a Tristar BL-4431 hand blender: materials, loads, costs and safety.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-decoupe-connecteurs.html">
+        <span class="list-num">09</span>
+        <span class="list-thumb"><img src="../assets/projects/decoupe-connecteurs/cover.jpg" alt="Connector Strip Cutting Machine" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Connector Strip Cutting Machine</span>
+          <span class="lbl lbl-sm">Diploma Thesis, ETML-ES</span>
+        </span>
+        <span class="list-blurb">Automated machine for cutting connector strips, designed during the diploma thesis and later pushed further.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-potence-mdf.html">
+        <span class="list-num">10</span>
+        <span class="list-thumb"><img src="../assets/projects/potence-mdf/cover.jpg" alt="MDF Cantilever Bracket" loading="lazy" /></span>
+        <span>
+          <span class="list-title">MDF Cantilever Bracket</span>
+          <span class="lbl lbl-sm">HES-SO Valais, 2nd year, 1st semester</span>
+        </span>
+        <span class="list-blurb">Load-bearing structure built from a single MDF board, load-tested to failure against other teams.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-design-eversys.html">
+        <span class="list-num">11</span>
+        <span class="list-thumb"><img src="../assets/projects/design-eversys/detail-selecteur.jpg" alt="Redesigning an Eversys Coffee Machine" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Redesigning an Eversys Coffee Machine</span>
+          <span class="lbl lbl-sm">Industrial Design, HES-SO Valais-Wallis, in partnership with Eversys</span>
+        </span>
+        <span class="list-blurb">Aesthetic concept for a professional coffee machine, in partnership with Eversys and industrial designers.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="list-row" href="projet-recyclage-pet-filament.html">
+        <span class="list-num">12</span>
+        <span class="list-thumb"><img src="../assets/projects/recyclage-pet-filament/cover.jpg" alt="Recycling PET Bottles into 3D Printing Filament" loading="lazy" /></span>
+        <span>
+          <span class="list-title">Recycling PET Bottles into 3D Printing Filament</span>
+          <span class="lbl lbl-sm">Personal project</span>
+        </span>
+        <span class="list-blurb">Homemade production of 3D printing filament from recycled PET bottles, a system later reproduced for RPM.</span>
+        <span class="list-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="wrap cv" id="parcours">
+    <div>
+      <h2>Background</h2>
+      <p>A path that starts on the shop floor and works its way up to research: five years as a polymechanic apprentice at Muller-Production SA, a technician diploma finished top of the class in technical subjects, then the Bachelor and the Master in mechanical engineering.</p>
+      <p>That order matters: I know what a part costs to make before I draw it.</p>
+      <p><a class="btn btn-secondary" href="../en/cv.html">Full curriculum vitae</a></p>
+    </div>
+    <div class="timeline">
+      <div class="tl-row now">
+        <span class="tl-when">2026 →</span>
+        <span>
+          <span class="tl-what">Master in Mechanical Engineering</span>
+          <span class="tl-where">HES-SO — continuing from the Bachelor in Industrial Systems</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2023 — 2026</span>
+        <span>
+          <span class="tl-what">Bachelor in Industrial Systems</span>
+          <span class="tl-where">HES-SO Valais — Design &amp; Materials · design, simulation, advanced materials</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2022 — 2023</span>
+        <span>
+          <span class="tl-what">Bachelor in Mechanical Engineering</span>
+          <span class="tl-where">HEPIA, Geneva — first year, Robot Contest</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2020 — 2022</span>
+        <span>
+          <span class="tl-what">Technician ES in Mechanical Engineering</span>
+          <span class="tl-where">ETML-ES, Lausanne — top of the class in technical subjects</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2015 — 2020</span>
+        <span>
+          <span class="tl-what">Polymechanic apprenticeship (CFC)</span>
+          <span class="tl-where">EPTMS, apprenticed at Muller-Production SA — collaboration continued after graduating</span>
+        </span>
+      </div>
+      <div class="tools">
+        <span class="lbl lbl-sm">Tools</span>
+        <div class="tags">
+            <span class="tag tag-neutral">Inventor</span>
+            <span class="tag tag-neutral">ANSYS</span>
+            <span class="tag tag-neutral">Granta</span>
+            <span class="tag tag-neutral">JavaFoil</span>
+            <span class="tag tag-neutral">Python</span>
+            <span class="tag tag-neutral">VBA</span>
+            <span class="tag tag-neutral">Excel</span>
+            <span class="tag tag-neutral">Word</span>
+          </div>
       </div>
     </div>
   </section>
+
 </main>
 
-<footer class="site-footer" id="contact">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3 class="footer-title">Contact</h3>
-        <p class="footer-text">
-          Feel free to reach out for any question or opportunity.
-        </p>
-      </div>
-      <ul class="contact-links">
-        <li><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></li>
-        <li><a href="tel:+41799063654">+41 79 906 36 54</a></li>
-        <li><a href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+<footer class="wrap">
+  <div class="cartouche frame" id="contact">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="cartouche-head">
+      <h2>A question, a commission, a Master's project?</h2>
+      <p>Write to me directly — I answer everyone.</p>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Gilles Mariethoz.
+    <div class="contacts">
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">E-mail</p>
+        <a class="contact-val" href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a>
+      </div>
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">Phone</p>
+        <a class="contact-val" href="tel:+41799063654">079 906 36 54</a>
+      </div>
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">LinkedIn</p>
+        <a class="contact-val" href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">/gilles-mariethoz</a>
+      </div>
+    </div>
+    <div class="titleblock lbl lbl-sm">
+      <div>Doc. Portfolio</div>
+      <div>2026 ed. · EN</div>
+      <div>12 sheets</div>
+      <div>© 2026 G. Mariethoz</div>
     </div>
   </div>
 </footer>
 
-<script src="../js/data.en.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/theme-toggle.js"></script>
 <script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lebenslauf · Gilles Mariethoz</title>
-<meta name="description" content="Lebenslauf von Gilles Mariethoz, Ingenieur für industrielle Systeme: Ausbildung, Erfahrung und technische Fähigkeiten." />
-<meta property="og:title" content="Lebenslauf · Gilles Mariethoz" />
-<meta property="og:description" content="Lebenslauf von Gilles Mariethoz, Ingenieur für industrielle Systeme: Ausbildung, Erfahrung und technische Fähigkeiten." />
-<meta property="og:type" content="profile" />
-<meta property="og:image" content="../assets/photo.png" />
+<title>Curriculum vitae · Gilles Mariethoz</title>
+<meta name="description" content="Werdegang, Ausbildung und technische Kompetenzen von Gilles Mariethoz, Ingenieur für industrielle Systeme." />
+<meta property="og:title" content="Curriculum vitae · Gilles Mariethoz" />
+<meta property="og:description" content="Werdegang, Ausbildung und technische Kompetenzen von Gilles Mariethoz, Ingenieur für industrielle Systeme." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/portrait.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/de/cv.html" />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/cv.html" />
 <link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/cv.html" />
@@ -16,245 +17,221 @@
 <link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/cv.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../css/style.css" />
-<script>
-  (function () {
-    var saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") {
-      document.documentElement.setAttribute("data-theme", saved);
-    }
-  })();
-</script>
+<script src="../js/theme.js"></script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="index.html">Gilles Mariethoz</a>
-    <div class="header-actions">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html#projets">Projekte</a></li>
-          <li><a class="active" href="cv.html">Lebenslauf</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-      <div class="lang-switch">
-        <a href="../cv.html">FR</a>
-        <span class="sep">·</span>
-        <a href="../en/cv.html">EN</a>
-        <span class="sep">·</span>
-        <span class="active">DE</span>
-      </div>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Dunklen Modus aktivieren">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-      </button>
-      <button class="nav-toggle" aria-label="Menü öffnen">&#9776;</button>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../de/index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="../de/index.html#travaux">Ausgewählte Arbeiten</a>
+      <a href="../de/index.html#autres">Weitere Projekte</a>
+      <a href="../de/cv.html">CV</a>
+      <a href="../de/index.html#contact">Kontakt</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Hell</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Dunkel</button>
     </div>
+    <div class="switch">
+      <a href="../cv.html">FR</a>
+      <span class="sep">/</span>
+      <a href="../en/cv.html">EN</a>
+      <span class="sep">/</span>
+      <span class="on">DE</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menü" aria-expanded="false" aria-controls="nav-links"><span></span></button>
   </div>
 </header>
 
-<main>
-  <section class="cv-header">
-    <div class="container">
-      <a class="back-link" href="index.html">&larr; Zurück zur Startseite</a>
-      <h1>Lebenslauf</h1>
-      <p>Ingenieur für industrielle Systeme / Maschinenbauingenieur.</p>
-      <a class="btn btn-primary" href="../assets/cv.pdf" download>Lebenslauf herunterladen (PDF)</a>
+<main class="wrap">
+
+  <p class="crumbs lbl">
+    <a href="../de/index.html">← Zurück</a>
+    <span class="dot">/</span>
+    <span>Curriculum vitae</span>
+  </p>
+
+  <section class="proj-head">
+    <div>
+      <h1>Curriculum vitae</h1>
+      <p class="lede">Ingenieur für industrielle Systeme / Maschinenbauingenieur. Werkstatt → Schule → Forschung.</p>
+    </div>
+    <div class="proj-docs">
+      <a class="btn btn-primary" href="../assets/cv.pdf">CV herunterladen (PDF) <span>PDF ↓</span></a>
     </div>
   </section>
 
-  <section class="cv-section">
-    <div class="container">
-      <h2>Profil</h2>
-      <p style="color: var(--text-secondary); max-width: 65ch;">
-        Begeistert von Innovation, ist es mein Ziel, eine revolutionäre Maschine im Dienste des
-        Gemeinwohls zu entwerfen. Mit einem analytischen Verstand und einer soliden mathematischen
-        Grundlage, Fähigkeiten, die ich seit meiner Kindheit entwickelt habe, bin ich entschlossen,
-        diese Vision Wirklichkeit werden zu lassen.
-      </p>
+  <div class="proj-body">
+    <nav class="toc">
+      <p class="lbl lbl-sm">Inhalt</p>
+      <a href="#profil">01 — Profil</a>
+      <a href="#formation">02 — Ausbildung</a>
+      <a href="#exp">03 — Erfahrung &amp; Engagement</a>
+      <a href="#skills">04 — Technische Kompetenzen</a>
+      <a href="#projets">05 — Projekte</a>
+    </nav>
+
+    <div class="sections">
+
+      <section class="sec" id="profil">
+        <div class="sec-title"><span class="sec-num">01</span><h2>Profil</h2></div>
+        <p>Angetrieben von Innovation ist es mein Ziel, eine wegweisende Maschine zum Nutzen der Allgemeinheit zu entwickeln. Mit analytischem Denken und einer solide gewachsenen mathematischen Grundlage bin ich entschlossen, diese Vision umzusetzen.</p>
+      </section>
+
+      <section class="sec" id="formation">
+        <div class="sec-title"><span class="sec-num">02</span><h2>Ausbildung</h2></div>
+        <div class="timeline">
+      <div class="tl-row">
+        <span class="tl-when">2026 →</span>
+        <span>
+          <span class="tl-what">Master Maschinenbau</span>
+          <span class="tl-where">HES-SO — in Fortsetzung des Bachelors Industrielle Systeme</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2023 — 2026</span>
+        <span>
+          <span class="tl-what">Bachelor Industrielle Systeme</span>
+          <span class="tl-where">HES-SO Valais — Design &amp; Materials · Konstruktion, Simulation, moderne Werkstoffe</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2022 — 2023</span>
+        <span>
+          <span class="tl-what">Bachelor Maschinenbau</span>
+          <span class="tl-where">HEPIA, Genf — erstes Jahr, Roboterwettbewerb</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2020 — 2022</span>
+        <span>
+          <span class="tl-what">Techniker HF Maschinenbau</span>
+          <span class="tl-where">ETML-ES, Lausanne — Jahrgangsbester in den technischen Fächern</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">2015 — 2020</span>
+        <span>
+          <span class="tl-what">Polymechaniker-Lehre (EFZ)</span>
+          <span class="tl-where">EPTMS, Lehre bei Muller-Production SA — Zusammenarbeit nach dem Abschluss fortgesetzt</span>
+        </span>
+      </div>
+        </div>
+      </section>
+
+      <section class="sec" id="exp">
+        <div class="sec-title"><span class="sec-num">03</span><h2>Erfahrung &amp; Engagement</h2></div>
+        <div class="timeline">
+      <div class="tl-row">
+        <span class="tl-when">2015 — 2020</span>
+        <span>
+          <span class="tl-what">Polymechaniker-Lehre</span>
+          <span class="tl-where">Muller-Production SA — Werkstatterfahrung in einer stark wachsenden Industrie; Zusammenarbeit nach dem Technikerdiplom fortgesetzt.</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">Bachelor HEPIA</span>
+        <span>
+          <span class="tl-what">Aktive Mitarbeit, JEHEPIA</span>
+          <span class="tl-where">Genf — Teamführung und Übernahme von Verantwortung.</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">Bachelor HES-SO</span>
+        <span>
+          <span class="tl-what">Integration, VRT</span>
+          <span class="tl-where">Sion — Zeitmanagement und strikte Einhaltung von Abläufen.</span>
+        </span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-when">Bachelor HES-SO</span>
+        <span>
+          <span class="tl-what">Gründung einer Ingenieur-Tochtergesellschaft, JEVS</span>
+          <span class="tl-where">Sion — Teamführung und Aufbau eines beruflichen Netzwerks.</span>
+        </span>
+      </div>
+        </div>
+      </section>
+
+      <section class="sec" id="skills">
+        <div class="sec-title"><span class="sec-num">04</span><h2>Technische Kompetenzen</h2></div>
+        <div class="tags">
+            <span class="tag">Maschinenbau-CAD</span>
+            <span class="tag">Simulation / ANSYS</span>
+            <span class="tag">Fertigung</span>
+            <span class="tag">Additive Fertigung</span>
+            <span class="tag">Teamführung</span>
+            <span class="tag">Zeitmanagement</span>
+          </div>
+        <div class="tools">
+          <span class="lbl lbl-sm">Software</span>
+          <div class="tags">
+            <span class="tag tag-neutral">Inventor</span>
+            <span class="tag tag-neutral">ANSYS</span>
+            <span class="tag tag-neutral">Granta</span>
+            <span class="tag tag-neutral">JavaFoil</span>
+            <span class="tag tag-neutral">Python</span>
+            <span class="tag tag-neutral">VBA</span>
+            <span class="tag tag-neutral">Excel</span>
+            <span class="tag tag-neutral">Word</span>
+          </div>
+        </div>
+        <div class="tools">
+          <span class="lbl lbl-sm">Sprachen</span>
+          <span class="langs"><span class="lang-row"><strong>Französisch</strong> — Muttersprache</span><span class="lang-row"><strong>Englisch</strong> — mittelstufe (B1)</span></span>
+        </div>
+      </section>
+
+      <section class="sec" id="projets">
+        <div class="sec-title"><span class="sec-num">05</span><h2>Projekte</h2></div>
+        <p>Zwölf dokumentierte Projekte, von der Technikerdiplomarbeit bis zur Forschung in der additiven Fertigung.</p>
+        <div class="doclinks">
+          <a class="doclink" href="../de/index.html#travaux">Arbeiten ansehen <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </div>
 
-  <section class="cv-section">
-    <div class="container">
-      <h2>Ausbildung</h2>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Master in Engineering, Maschinenbau, HES-SO</span>
-          <span class="cv-entry-date">September 2026 bis heute</span>
-        </div>
-        <p>Fortsetzung des Studiums im Maschinenbau auf Masterstufe, in Fortführung des Bachelors in industriellen Systemen.</p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Bachelor industrielle Systeme, HES-SO Valais</span>
-          <span class="cv-entry-date">September 2023 bis 2026</span>
-        </div>
-        <p>
-          Ausbildung in industriellen Systemen, Design und Werkstoffen. Vertiefung der Kenntnisse
-          in Maschinenbau, Simulation und fortgeschrittenen Werkstoffen.
-        </p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Bachelor Maschinenbau, HEPIA (Genf)</span>
-          <span class="cv-entry-date">September 2022 bis 2023</span>
-        </div>
-        <p>
-          Entwicklung von Ingenieurkompetenzen und Selbstständigkeit, erste Erfahrung eines
-          eigenständigen Lebens. Vertiefung der Mathematik und Logik.
-        </p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Techniker Maschinenbau, ETML-ES (Lausanne)</span>
-          <span class="cv-entry-date">August 2020 bis September 2022</span>
-        </div>
-        <p>
-          Diplom erhalten am 14. September 2022. Ausbildung mit Schwerpunkt Mathematik und
-          Logik, Jahrgangsbester in technischen Fächern.
-        </p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Eidg. Fähigkeitszeugnis Polymechaniker, EPTMS</span>
-          <span class="cv-entry-date">August 2015 bis August 2020</span>
-        </div>
-        <p>EFZ erhalten am 24. August 2020, parallel zur Lehre bei Muller-Production SA.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Erfahrung &amp; Engagement</h2>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Lehre als Polymechaniker, Muller-Production SA</span>
-          <span class="cv-entry-date">August 2015 bis August 2020</span>
-        </div>
-        <p>
-          Konkrete und wertvolle Erfahrung in einer mechanischen Werkstatt, in einer stark
-          wachsenden Branche. Zusammenarbeit nach Erhalt des Technikerdiploms fortgesetzt.
-        </p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Aktives Mitglied, JEHEPIA (Genf)</span>
-          <span class="cv-entry-date">Während des Bachelors an der HEPIA</span>
-        </div>
-        <p>Entwicklung von Teamführungskompetenzen und Übernahme von Verantwortung.</p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Mitglied, VRT (Sitten)</span>
-          <span class="cv-entry-date">Während des Bachelors an der HES-SO Valais</span>
-        </div>
-        <p>Verbesserung des Zeitmanagements und strikte Einhaltung von Abläufen.</p>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-head">
-          <span>Mitgründer einer Ingenieurniederlassung, JEVS (Sitten)</span>
-          <span class="cv-entry-date">Während des Bachelors an der HES-SO Valais</span>
-        </div>
-        <p>Vertiefung der Teamführung und Erweiterung des beruflichen Netzwerks.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Technische Fähigkeiten</h2>
-      <div class="chip-list">
-        <span class="chip">Maschinenbau</span>
-        <span class="chip">CAD</span>
-        <span class="chip">Simulation / ANSYS</span>
-        <span class="chip">Fertigung</span>
-        <span class="chip">Teamführung</span>
-        <span class="chip">Zeitmanagement</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Software</h2>
-      <div class="chip-list">
-        <span class="chip">Inventor</span>
-        <span class="chip">Excel</span>
-        <span class="chip">Word</span>
-        <span class="chip">ANSYS</span>
-        <span class="chip">Python</span>
-        <span class="chip">VBA</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Sprachen</h2>
-      <div class="chip-list">
-        <span class="chip">Französisch: Muttersprache</span>
-        <span class="chip">Englisch: Mittelstufe (B1)</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Soft Skills</h2>
-      <div class="chip-list">
-        <span class="chip">Fähigkeit zur Distanz / Überblick</span>
-        <span class="chip">Intellektuelle Neugier</span>
-        <span class="chip">Zeitmanagement</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
-    <div class="container">
-      <h2>Relevante Projekte / Engagements</h2>
-      <p style="color: var(--text-secondary);">
-        Siehe den Bereich <a href="index.html#projets" style="color: var(--accent); font-weight:600;">Projekte</a> des Portfolios.
-      </p>
-    </div>
-  </section>
 </main>
 
-<footer class="site-footer" id="contact">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3 class="footer-title">Kontakt</h3>
-        <p class="footer-text">
-          Kontaktiere mich gerne bei Fragen oder für Möglichkeiten.
-        </p>
-      </div>
-      <ul class="contact-links">
-        <li><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></li>
-        <li><a href="tel:+41799063654">+41 79 906 36 54</a></li>
-        <li><a href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+<footer class="wrap">
+  <div class="cartouche frame" id="contact">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="cartouche-head">
+      <h2>Eine Frage, ein Auftrag, ein Masterprojekt?</h2>
+      <p>Schreiben Sie mir direkt — ich antworte allen.</p>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Gilles Mariethoz.
+    <div class="contacts">
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">E-Mail</p>
+        <a class="contact-val" href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a>
+      </div>
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">Telefon</p>
+        <a class="contact-val" href="tel:+41799063654">079 906 36 54</a>
+      </div>
+      <div class="contact-cell">
+        <p class="lbl lbl-sm">LinkedIn</p>
+        <a class="contact-val" href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">/gilles-mariethoz</a>
+      </div>
+    </div>
+    <div class="titleblock lbl lbl-sm">
+      <div>Dok. Portfolio</div>
+      <div>Ausg. 2026 · DE</div>
+      <div>12 Blätter</div>
+      <div>© 2026 G. Mariethoz</div>
     </div>
   </div>
 </footer>
 
-<script src="../js/theme-toggle.js"></script>
 <script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

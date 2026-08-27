@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flow Study Around a NACA 0015 Airfoil · Gilles Mariethoz</title>
+<meta name="description" content="Numerical simulation of flow around a NACA 0015 airfoil, with stall analysis at different angles of attack." />
+<meta property="og:title" content="Flow Study Around a NACA 0015 Airfoil · Gilles Mariethoz" />
+<meta property="og:description" content="Numerical simulation of flow around a NACA 0015 airfoil, with stall analysis at different angles of attack." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gillesmariethoz.github.io/assets/projects/cfd-naca0015/cover.jpg" />
+<link rel="canonical" href="https://gillesmariethoz.github.io/en/projet-cfd-naca0015.html" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="alternate" hreflang="fr" href="https://gillesmariethoz.github.io/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="en" href="https://gillesmariethoz.github.io/en/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="de" href="https://gillesmariethoz.github.io/de/projet-cfd-naca0015.html" />
+<link rel="alternate" hreflang="x-default" href="https://gillesmariethoz.github.io/projet-cfd-naca0015.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../en/index.html">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gilles Mariethoz</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <nav class="nav-links" id="nav-links">
+      <a href="../en/index.html#travaux">Selected work</a>
+      <a href="../en/index.html#autres">Other projects</a>
+      <a href="../en/cv.html">CV</a>
+      <a href="../en/index.html#contact">Contact</a>
+    </nav>
+    <div class="switch">
+      <button type="button" id="to-light">Light</button>
+      <span class="sep">/</span>
+      <button type="button" id="to-dark">Dark</button>
+    </div>
+    <div class="switch">
+      <a href="../projet-cfd-naca0015.html">FR</a>
+      <span class="sep">/</span>
+      <span class="on">EN</span>
+      <span class="sep">/</span>
+      <a href="../de/projet-cfd-naca0015.html">DE</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs lbl">
+    <a href="../en/index.html#travaux">← Selected work</a>
+    <span class="dot">/</span>
+    <span>Sheet 07</span>
+  </p>
+
+  <section class="proj-head">
+    <div>
+      <p class="feature-meta">
+        <span class="feature-num">07</span>
+        <span class="lbl">CFD Course, HES-SO Valais-Wallis, 3rd year, semester 4</span>
+      </p>
+      <h1>Flow Study Around a NACA 0015 Airfoil</h1>
+      <p class="lede">Numerical simulation of flow around a NACA 0015 airfoil, with stall analysis at different angles of attack.</p>
+    </div>
+    <div class="proj-docs">
+      <p class="lbl lbl-sm">Skills</p>
+      <div class="tags">
+            <span class="tag">CFD</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">JavaFoil</span>
+            <span class="tag">Simulation</span>
+          </div>
+    </div>
+  </section>
+
+  <figure class="proj-hero frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <img src="../assets/projects/cfd-naca0015/cover.jpg" alt="Flow Study Around a NACA 0015 Airfoil" />
+  </figure>
+  <p class="figcap lbl lbl-sm"><span>Fig. 01</span><span>CFD</span></p>
+
+  <section class="spec frame">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <p class="spec-title lbl lbl-sm">Specifications</p>
+    <div class="spec-grid" data-cells="4">
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Airfoil</p>
+        <p class="spec-val acc">NACA 0015</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Software</p>
+        <p class="spec-val">ANSYS · JavaFoil</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Fluid</p>
+        <p class="spec-val">H₂O</p>
+      </div>
+      <div class="spec-cell">
+        <p class="lbl lbl-sm">Year</p>
+        <p class="spec-val">2025</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="proj-body">
+    <nav class="toc">
+      <p class="lbl lbl-sm">Contents</p>
+      <a href="#s1">01 — The project</a>
+      <a href="#s2">02 — Results</a>
+      <a href="#s3">03 — Conclusion</a>
+      <a href="#s4">04 — What I learned</a>
+    </nav>
+
+    <div class="sections">
+
+      <section class="sec" id="s1">
+        <div class="sec-title">
+          <span class="sec-num">01</span>
+          <h2>The project</h2>
+        </div>
+        <p>Project carried out in two parts. The first part consisted of simulating water flow around a NACA 0015 airfoil at 0° angle of attack, in order to validate the numerical model, lift, drag and flow behavior. The second part extended the study to different angles of attack, analyzing how lift, drag and flow characteristics evolve, up to stall and flow separation at high angles.</p>
+      </section>
+
+      <section class="sec" id="s2">
+        <div class="sec-title">
+          <span class="sec-num">02</span>
+          <h2>Results</h2>
+        </div>
+        <p>Simulation convergence and mesh quality were checked. The lift and drag coefficients obtained matched expectations and reference simulations. The pressure, friction and velocity fields were consistent with the expected theoretical behavior, and stall as well as flow separation were indeed observed at high angles of attack.</p>
+      </section>
+
+      <section class="sec" id="s3">
+        <div class="sec-title">
+          <span class="sec-num">03</span>
+          <h2>Conclusion</h2>
+        </div>
+        <p>This project demonstrated the reliability of the numerical model for steady flow around a symmetric airfoil, and provided a better understanding of the effect of angle of attack. Improvements identified: refine the mesh near the airfoil and use a laminar-to-turbulent transition model for more accurate friction predictions. Tools used: ANSYS, JavaFoil.</p>
+      </section>
+
+      <section class="sec" id="s4">
+        <div class="sec-title">
+          <span class="sec-num">04</span>
+          <h2>What I learned</h2>
+        </div>
+        <p>This project taught me how to simulate a flow and, more broadly, gave me a solid foundation in computational fluid dynamics (CFD).</p>
+      </section>
+
+    </div>
+  </div>
+
+  <nav class="prevnext">
+    <a href="projet-alpinea-vrt.html">
+      <span class="lbl lbl-sm">← Previous sheet</span>
+      <strong>Alpinea · VRT Formula Student</strong>
+    </a>
+    <a href="projet-reverse-engineering-mixeur.html">
+      <span class="lbl lbl-sm">Next sheet →</span>
+      <strong>Reverse Engineering a Hand Blender</strong>
+    </a>
+  </nav>
+
+  <div class="titleblock proj-titleblock lbl lbl-sm">
+    <div>Sheet 07 / 12</div>
+    <div>2026 ed. · EN</div>
+    <div><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></div>
+    <div>© 2026 G. Mariethoz</div>
+  </div>
+
+</main>
+
+<script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
