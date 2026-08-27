@@ -41,6 +41,8 @@ function renderProject() {
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) metaDescription.setAttribute("content", project.shortDescription);
 
+  setupHreflangLinks(id);
+
   root.innerHTML = `
     <section class="project-hero">
       <div class="container">
@@ -67,6 +69,31 @@ function renderProject() {
       <a class="back-link" href="index.html#projets">&larr; ${strings.back}</a>
     </div>
   `;
+}
+
+/* Indique aux moteurs de recherche les 3 versions linguistiques de
+   cette même page projet (utile pour le référencement, invisible
+   pour les visiteurs). */
+function setupHreflangLinks(id) {
+  if (!id) return;
+  const base = "https://gillesmariethoz.github.io";
+  const hrefs = {
+    fr: `${base}/project.html?id=${id}`,
+    en: `${base}/en/project.html?id=${id}`,
+    de: `${base}/de/project.html?id=${id}`,
+  };
+  Object.entries(hrefs).forEach(([lang, href]) => {
+    const link = document.createElement("link");
+    link.rel = "alternate";
+    link.setAttribute("hreflang", lang);
+    link.href = href;
+    document.head.appendChild(link);
+  });
+  const defaultLink = document.createElement("link");
+  defaultLink.rel = "alternate";
+  defaultLink.setAttribute("hreflang", "x-default");
+  defaultLink.href = hrefs.fr;
+  document.head.appendChild(defaultLink);
 }
 
 function renderBlock(num, label, text) {
