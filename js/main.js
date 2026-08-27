@@ -117,6 +117,29 @@ function setupCarousel() {
   update();
 }
 
+/* Certains navigateurs n'amènent pas toujours correctement la page
+   jusqu'à la bonne section quand on arrive avec une adresse du type
+   index.html#projets (lien "Gilles Mariethoz" ou "Projets" dans le
+   menu). On force ce défilement nous-mêmes, en tenant compte de la
+   hauteur du menu fixe en haut de page. */
+function scrollToHashTarget() {
+  if (!location.hash) return;
+  let target;
+  try {
+    target = document.querySelector(location.hash);
+  } catch (e) {
+    return;
+  }
+  if (!target) return;
+  const header = document.querySelector(".site-header");
+  const offset = (header ? header.offsetHeight : 0) + 16;
+  const top = target.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+}
+
+window.addEventListener("load", scrollToHashTarget);
+window.addEventListener("hashchange", scrollToHashTarget);
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProjectCards();
   setupNavToggle();
