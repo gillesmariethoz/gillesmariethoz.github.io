@@ -450,8 +450,10 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   .features { gap: 64px; }
   .list-row { grid-template-columns: 40px 92px minmax(0, 1fr); gap: 16px; }
   .list-blurb, .list-arrow { display: none; }
-  .contacts, .titleblock, .plate-grid, .spec-grid, .pair, .prevnext { grid-template-columns: 1fr; }
-  .contact-cell, .titleblock div, .plate-cell, .spec-cell, .pair > div, .prevnext a { border-right: 0; border-bottom: 1px solid var(--line); }
+  .contacts, .titleblock, .spec-grid, .pair, .prevnext { grid-template-columns: 1fr; }
+  .contact-cell, .titleblock div, .spec-cell, .pair > div, .prevnext a { border-right: 0; border-bottom: 1px solid var(--line); }
+  .plate-cell { padding: 20px 18px; }
+  .plate-num { font-size: 38px; }
   .spec-grid .spec-cell { border-top: 0; border-bottom: 1px solid var(--line); }
   .spec-grid .spec-cell:last-child { border-bottom: 0; }
   .prevnext a:last-child { text-align: left; border-bottom: 0; }
