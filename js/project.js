@@ -1,6 +1,18 @@
 /* Page projet : lit l'id dans l'adresse (?id=...) et affiche
-   automatiquement le bon contenu depuis data.js. Un seul modèle
-   de page sert pour tous les projets. */
+   automatiquement le bon contenu depuis data.js (ou data.en.js /
+   data.de.js selon la langue). Un seul modèle de page sert pour
+   tous les projets, dans les 3 langues. */
+
+const UI_STRINGS = {
+  fr: { notFound: "Projet introuvable.", notFoundTitle: "Projet introuvable", back: "Retour aux projets", gallery: "Galerie" },
+  en: { notFound: "Project not found.", notFoundTitle: "Project not found", back: "Back to projects", gallery: "Gallery" },
+  de: { notFound: "Projekt nicht gefunden.", notFoundTitle: "Projekt nicht gefunden", back: "Zurück zu den Projekten", gallery: "Galerie" },
+};
+
+function t() {
+  const lang = document.documentElement.lang || "fr";
+  return UI_STRINGS[lang] || UI_STRINGS.fr;
+}
 
 function getProjectIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -11,15 +23,16 @@ function renderProject() {
   const id = getProjectIdFromUrl();
   const project = PROJECTS.find((p) => p.id === id);
   const root = document.getElementById("project-root");
+  const strings = t();
 
   if (!project) {
     root.innerHTML = `
       <div class="container" style="padding: 60px 24px;">
-        <p>Projet introuvable.</p>
-        <a class="back-link" href="index.html">&larr; Retour aux projets</a>
+        <p>${strings.notFound}</p>
+        <a class="back-link" href="index.html">&larr; ${strings.back}</a>
       </div>
     `;
-    document.title = "Projet introuvable · Gilles Mariethoz";
+    document.title = `${strings.notFoundTitle} · Gilles Mariethoz`;
     return;
   }
 
@@ -31,7 +44,7 @@ function renderProject() {
   root.innerHTML = `
     <section class="project-hero">
       <div class="container">
-        <a class="back-link" href="index.html#projets">&larr; Retour aux projets</a>
+        <a class="back-link" href="index.html#projets">&larr; ${strings.back}</a>
         <h1>${project.title}</h1>
         <p class="project-subtitle">${project.subtitle}</p>
         ${renderLinks(project)}
@@ -51,7 +64,7 @@ function renderProject() {
     </section>
 
     <div class="container project-footer-nav">
-      <a class="back-link" href="index.html#projets">&larr; Retour aux projets</a>
+      <a class="back-link" href="index.html#projets">&larr; ${strings.back}</a>
     </div>
   `;
 }
@@ -90,7 +103,7 @@ function renderGallery(project) {
     <div class="project-block">
       <div class="project-block-label">
         <span class="num">+</span>
-        <span>Galerie</span>
+        <span>${t().gallery}</span>
       </div>
       <div class="project-block-content">
         <div class="project-gallery">
@@ -112,7 +125,16 @@ function setupNavToggle() {
   });
 }
 
+function setupLangLinks() {
+  const id = getProjectIdFromUrl();
+  if (!id) return;
+  document.querySelectorAll(".lang-link").forEach((link) => {
+    link.href = `${link.getAttribute("href")}?id=${id}`;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProject();
   setupNavToggle();
+  setupLangLinks();
 });

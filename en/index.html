@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gilles Mariethoz · Ingénieur en systèmes industriels</title>
-<meta name="description" content="Portfolio de Gilles Mariethoz, ingénieur en systèmes industriels : conception mécanique, simulation et fabrication additive." />
-<meta property="og:title" content="Gilles Mariethoz · Ingénieur en systèmes industriels" />
-<meta property="og:description" content="Portfolio de Gilles Mariethoz, ingénieur en systèmes industriels : conception mécanique, simulation et fabrication additive." />
+<title>Gilles Mariethoz · Mechanical Engineer</title>
+<meta name="description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, simulation and additive manufacturing." />
+<meta property="og:title" content="Gilles Mariethoz · Mechanical Engineer" />
+<meta property="og:description" content="Portfolio of Gilles Mariethoz, industrial systems engineer: mechanical design, simulation and additive manufacturing." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/photo.png" />
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta property="og:image" content="../assets/photo.png" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 <script>
-  /* Applique tout de suite le thème choisi par le visiteur (avant même
-     l'affichage de la page), pour éviter un flash de la mauvaise couleur. */
   (function () {
     var saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") {
@@ -33,23 +31,23 @@
     <div class="header-actions">
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html#projets">Projets</a></li>
+          <li><a href="index.html#projets">Projects</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="lang-switch">
-        <span class="active">FR</span>
+        <a href="../index.html">FR</a>
         <span class="sep">·</span>
-        <a href="en/index.html">EN</a>
+        <span class="active">EN</span>
         <span class="sep">·</span>
-        <a href="de/index.html">DE</a>
+        <a href="../de/index.html">DE</a>
       </div>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Activer le mode sombre">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
         <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
       </button>
-      <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
     </div>
   </div>
 </header>
@@ -60,24 +58,24 @@
       <div class="hero-content">
         <p class="hero-eyebrow">Portfolio</p>
         <h1>Gilles Mariethoz</h1>
-        <p class="hero-subtitle">Ingénieur en systèmes industriels / Mechanical Engineer</p>
+        <p class="hero-subtitle">Industrial Systems Engineer / Mechanical Engineer</p>
         <p class="hero-text">
-          Je conçois, simule et fabrique des pièces et systèmes mécaniques, de l'idée jusqu'aux essais,
-          avec un intérêt particulier pour l'optimisation de structures, la fabrication additive et les
-          véhicules de compétition.
+          I design, simulate and manufacture mechanical parts and systems, from concept through testing,
+          with a particular interest in structural optimization, additive manufacturing and racing
+          vehicles.
         </p>
         <ul class="hero-skills">
-          <li>Conception mécanique</li>
-          <li>Simulation / matériaux</li>
-          <li>Fabrication additive</li>
+          <li>Mechanical design</li>
+          <li>Simulation / materials</li>
+          <li>Additive manufacturing</li>
         </ul>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="index.html#projets">Voir mes projets</a>
-          <a class="btn btn-secondary" href="cv.html">Mon CV</a>
+          <a class="btn btn-primary" href="index.html#projets">See my projects</a>
+          <a class="btn btn-secondary" href="cv.html">My CV</a>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="assets/photo.png" alt="Photo de Gilles Mariethoz" />
+        <img src="../assets/photo.png" alt="Photo of Gilles Mariethoz" />
       </div>
     </div>
   </section>
@@ -86,20 +84,20 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <h2>Projets</h2>
-          <p>Une sélection de projets d'ingénierie mécanique.</p>
+          <h2>Projects</h2>
+          <p>A selection of mechanical engineering projects.</p>
         </div>
       </div>
       <div class="carousel" id="projects-carousel">
-        <button class="carousel-arrow" id="carousel-prev" aria-label="Projet précédent">&#8592;</button>
+        <button class="carousel-arrow" id="carousel-prev" aria-label="Previous project">&#8592;</button>
         <div class="carousel-viewport">
           <div class="carousel-fade carousel-fade-left" id="carousel-fade-left"></div>
           <div class="carousel-fade carousel-fade-right" id="carousel-fade-right"></div>
           <div class="projects-grid" id="projects-grid">
-            <!-- Rempli automatiquement depuis js/data.js -->
+            <!-- Automatically filled from ../js/data.en.js -->
           </div>
         </div>
-        <button class="carousel-arrow" id="carousel-next" aria-label="Projet suivant">&#8594;</button>
+        <button class="carousel-arrow" id="carousel-next" aria-label="Next project">&#8594;</button>
       </div>
     </div>
   </section>
@@ -111,12 +109,12 @@
       <div>
         <h3 class="footer-title">Contact</h3>
         <p class="footer-text">
-          N'hésite pas à me contacter pour toute question ou opportunité.
+          Feel free to reach out for any question or opportunity.
         </p>
       </div>
       <ul class="contact-links">
         <li><a href="mailto:gilles.mariethoz@gmail.com">gilles.mariethoz@gmail.com</a></li>
-        <li><a href="tel:+41799063654">079 906 36 54</a></li>
+        <li><a href="tel:+41799063654">+41 79 906 36 54</a></li>
         <li><a href="https://www.linkedin.com/in/gilles-mariethoz-a6a2a6200/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
@@ -126,11 +124,9 @@
   </div>
 </footer>
 
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
-<script src="js/theme-toggle.js"></script>
-<!-- Statistiques de visite privées (GoatCounter) : visibles uniquement
-     par Gilles, connecté sur gillesmariethoz.goatcounter.com -->
+<script src="../js/data.en.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/theme-toggle.js"></script>
 <script data-goatcounter="https://gillesmariethoz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

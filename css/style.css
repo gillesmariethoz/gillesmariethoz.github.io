@@ -149,6 +149,33 @@ a {
   gap: 20px;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.lang-switch a,
+.lang-switch span {
+  padding: 2px 3px;
+  color: var(--text-secondary);
+}
+
+.lang-switch a:hover {
+  color: var(--accent);
+}
+
+.lang-switch .active {
+  color: var(--text);
+}
+
+.lang-switch .sep {
+  color: var(--border);
+  padding: 0;
+}
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--border);

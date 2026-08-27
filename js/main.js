@@ -1,9 +1,19 @@
 /* Page d'accueil : affiche automatiquement une carte par projet
-   défini dans data.js. Rien à modifier ici pour ajouter un projet. */
+   défini dans data.js (ou data.en.js / data.de.js selon la langue).
+   Rien à modifier ici pour ajouter un projet. */
+
+const CARD_LINK_TEXT = {
+  fr: "Voir le projet",
+  en: "See the project",
+  de: "Projekt ansehen",
+};
 
 function renderProjectCards() {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
+
+  const lang = document.documentElement.lang || "fr";
+  const linkText = CARD_LINK_TEXT[lang] || CARD_LINK_TEXT.fr;
 
   grid.innerHTML = PROJECTS.map(
     (project) => `
@@ -17,7 +27,7 @@ function renderProjectCards() {
         <div class="tag-list">
           ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
         </div>
-        <span class="card-link">Voir le projet &rarr;</span>
+        <span class="card-link">${linkText} &rarr;</span>
       </div>
     </a>
   `
