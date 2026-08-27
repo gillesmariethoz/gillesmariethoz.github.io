@@ -25,6 +25,9 @@ function renderProject() {
 
   document.title = `${project.title} · Gilles Mariethoz`;
 
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) metaDescription.setAttribute("content", project.shortDescription);
+
   root.innerHTML = `
     <section class="project-hero">
       <div class="container">

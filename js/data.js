@@ -48,7 +48,7 @@ const PROJECTS = [
     shortDescription:
       "Machine automatisée pour découper des barrettes de connecteur, conçue durant le travail de diplôme ES puis poussée plus loin par la suite.",
     tags: ["Conception mécanique", "Automatisation", "Pneumatique", "CAO"],
-    image: "assets/projects/decoupe-connecteurs/cover.png",
+    image: "assets/projects/decoupe-connecteurs/cover.jpg",
     links: [
       { label: "Résumé officiel du travail de diplôme (PDF)", url: "assets/projects/decoupe-connecteurs/resume-diplome.pdf" },
     ],
@@ -79,7 +79,7 @@ const PROJECTS = [
     shortDescription:
       "Robot 100% autonome, lauréat du prix de la performance temporelle au concours Robots HEPIA 2023, chargé de débarrasser une table de dîner aux chandelles.",
     tags: ["Robotique", "Conception mécanique", "Autonomie", "HEPIA"],
-    image: "assets/projects/robot-hepia/cover.png",
+    image: "assets/projects/robot-hepia/cover.jpg",
     links: [
       { label: "Article HEPIA (résultats)", url: "https://www.hesge.ch/hepia/actualites/2023/concours-robots-2023-les-resultats" },
       { label: "Reportage 20 minutes", url: "https://www.20min.ch/fr/video/des-robots-debarrassent-les-tables-de-lhepia-617765467307" },
@@ -116,7 +116,7 @@ const PROJECTS = [
     shortDescription:
       "Voiture électrique de Formula Student de la VRT : conception du TSAC (conteneur d'accumulateur) au sein de la Team Mécanique.",
     tags: ["Formula Student", "TSAC", "Véhicule électrique", "VRT"],
-    image: "assets/projects/bella-lui-vrt/cover.png",
+    image: "assets/projects/bella-lui-vrt/cover.jpg",
     links: [
       { label: "Page VRT : Bella Lui", url: "https://www.vrt-fs.ch/nos-creations/bella-lui" },
     ],
@@ -147,7 +147,7 @@ const PROJECTS = [
     shortDescription:
       "Structure porteuse construite à partir d'une seule plaque de MDF, testée en charge jusqu'à la rupture face aux autres équipes.",
     tags: ["Conception mécanique", "Résistance des matériaux", "Travail d'équipe"],
-    image: "assets/projects/potence-mdf/cover.png",
+    image: "assets/projects/potence-mdf/cover.jpg",
     links: [],
     sections: [
       {
@@ -207,7 +207,7 @@ const PROJECTS = [
     shortDescription:
       "Troisième monoplace électrique de la VRT : simulations de sécurité, formation CAO et soutien à la Team Mécanique.",
     tags: ["Formula Student", "Simulation", "CAO", "VRT"],
-    image: "assets/projects/alpinea-vrt/cover.png",
+    image: "assets/projects/alpinea-vrt/cover.jpg",
     links: [
       { label: "Page VRT : Alpinea", url: "https://www.vrt-fs.ch/nos-creations/alpinea" },
     ],
@@ -234,7 +234,7 @@ const PROJECTS = [
     shortDescription:
       "Lanceur de balles de golf à propulsion pneumatique, conçu en binôme et vainqueur du concours face aux autres équipes.",
     tags: ["Conception mécanique", "CAO", "Pneumatique", "Balistique"],
-    image: "assets/projects/lanceur-balles-golf/cover.png",
+    image: "assets/projects/lanceur-balles-golf/cover.jpg",
     links: [
       { label: "Rapport complet du projet (PDF)", url: "assets/projects/lanceur-balles-golf/rapport.pdf" },
     ],
@@ -273,7 +273,7 @@ const PROJECTS = [
     shortDescription:
       "Simulation numérique de l'écoulement autour d'un profil NACA 0015, avec analyse du décrochage à différents angles d'attaque.",
     tags: ["CFD", "ANSYS", "JavaFoil", "Simulation"],
-    image: "assets/projects/cfd-naca0015/cover.png",
+    image: "assets/projects/cfd-naca0015/cover.jpg",
     links: [],
     sections: [
       {
@@ -302,7 +302,7 @@ const PROJECTS = [
     shortDescription:
       "Analyse par rétro-ingénierie d'un mixeur plongeant Tristar BL-4431 : matériaux, efforts, coûts et sécurité.",
     tags: ["Reverse engineering", "Analyse matériaux", "Analyse de sécurité", "Granta"],
-    image: "assets/projects/reverse-engineering-mixeur/cover.png",
+    image: "assets/projects/reverse-engineering-mixeur/cover.jpg",
     links: [],
     sections: [
       {
@@ -366,7 +366,7 @@ const PROJECTS = [
     shortDescription:
       "Fabrication artisanale de filament d'impression 3D à partir de bouteilles PET recyclées, un système ensuite repris par RPM.",
     tags: ["Recyclage", "Impression 3D", "Fait maison", "PET"],
-    image: "assets/projects/recyclage-pet-filament/cover.png",
+    image: "assets/projects/recyclage-pet-filament/cover.jpg",
     links: [],
     sections: [
       {
@@ -395,7 +395,7 @@ const PROJECTS = [
     shortDescription:
       "Prothèse fémorale bio-inspirée à structures TPMS, combinant conception générative et fabrication additive LPBF en Ti6Al4V.",
     tags: ["LPBF", "Ti6Al4V", "TPMS", "ANSYS", "Python"],
-    image: "assets/projects/tpms/cover.png",
+    image: "assets/projects/tpms/cover.jpg",
     links: [
       { label: "Résumé du travail de Bachelor (PDF)", url: "assets/projects/tpms/resume.pdf" },
       { label: "Rapport final complet (PDF)", url: "assets/projects/tpms/rapport-final.pdf" },
