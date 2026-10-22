@@ -212,19 +212,26 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
 .hero-photo .frame { background: var(--surface); }
 .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 20%; }
 
-/* ── Plaque de chiffres ────────────────────────────────── */
-.plate { margin-top: 72px; }
+/* ── Bandeau de repères ────────────────────────────────── */
+.plate {
+  margin-top: 72px; border-left: 0; border-right: 0;
+  background: color-mix(in srgb, var(--ink) 2%, transparent);
+}
+.plate > .corner { display: none; }
 .plate-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .plate-cell {
-  display: grid; grid-template-columns: 54px minmax(0, 1fr); align-items: center; gap: 16px;
-  padding: 20px 22px; border-right: 1px solid var(--line);
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 14px;
+  min-height: 84px; padding: 16px 22px; border-right: 1px solid var(--line);
 }
 .plate-cell:last-child { border-right: 0; }
 .plate-num {
-  font-family: var(--font-h); font-weight: 600; font-size: 42px;
+  font-family: var(--font-h); font-weight: 600; font-size: 36px; color: var(--acc-d);
   line-height: 1; letter-spacing: -.02em;
 }
-.plate-txt { font-size: 12px; line-height: 1.4; color: var(--mut-2); margin: 0; }
+.plate-txt {
+  max-width: 18ch; font-size: 11px; font-weight: 500; line-height: 1.35;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--mut-2); margin: 0;
+}
 
 /* ── Titres de section ─────────────────────────────────── */
 .sec-pad { padding-top: 118px; }
@@ -251,6 +258,14 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   background: color-mix(in srgb, var(--acc) 4%, transparent);
   transform: translateY(-2px);
 }
+.feature::after {
+  content: "Ouvrir ↗"; position: absolute; z-index: 2; top: 13px; right: 16px;
+  font-size: 9px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--mut); pointer-events: none;
+}
+html[lang="en"] .feature::after { content: "Open ↗"; }
+html[lang="de"] .feature::after { content: "Öffnen ↗"; }
+.feature:hover::after { color: var(--acc-d); }
 .feature:has(.feature-link:focus-visible) { outline: 2px solid var(--acc); outline-offset: 4px; }
 .feature-link { position: absolute; inset: 0; z-index: 1; color: transparent; }
 .feature-link:focus { outline: 0; }
@@ -457,9 +472,8 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   :root { --gut: 28px; }
   .hero-in, .cv, .proj-head { grid-template-columns: 1fr; gap: 44px; }
   .hero-photo { max-width: 380px; }
-  .plate-grid { grid-template-columns: repeat(2, 1fr); }
-  .plate-cell:nth-child(2n) { border-right: 0; }
-  .plate-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .plate-grid { grid-template-columns: repeat(4, 1fr); }
+  .plate-cell { grid-template-columns: 1fr; align-content: center; gap: 7px; }
   /* Sur mobile/tablette, on annule l'alternance "miroir" du bureau :
      le titre passe toujours avant la photo, dans le même ordre pour
      toutes les cartes. */
@@ -519,10 +533,10 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   .list-blurb, .list-arrow { display: none; }
   .contacts, .titleblock, .pair, .prevnext { grid-template-columns: 1fr; }
   .contact-cell, .titleblock div, .pair > div, .prevnext a { border-right: 0; border-bottom: 1px solid var(--line); }
-  .plate-grid { grid-template-columns: 1fr; }
-  .plate-cell { padding: 17px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .plate-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .plate-cell:last-child { border-bottom: 0; }
+  .plate-grid { grid-template-columns: repeat(2, 1fr); }
+  .plate-cell { padding: 15px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .plate-cell:nth-child(2n) { border-right: 0; }
+  .plate-cell:nth-child(n+3) { border-bottom: 0; }
   .plate-num { font-size: 36px; }
   .spec-grid { grid-template-columns: 1fr; }
   .spec-cell { min-height: 0; }

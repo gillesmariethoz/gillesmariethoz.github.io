@@ -213,10 +213,10 @@ const CONTENT = {
       alt: "Portrait de Gilles Mariethoz",
     },
     stats: [
-      ["12", "projets d'ingénierie documentés, de l'atelier au laboratoire"],
-      ["5", "distinctions et concours techniques remportés, dont deux pour le travail de Bachelor"],
-      ["2", "monoplaces Formula Student — certifié HV2 / HV3, habilité à intervenir sur les systèmes haute tension"],
-      ["5", "ans d'atelier en apprentissage polymécanicien avant l'école"],
+      ["12", "projets documentés"],
+      ["5", "distinctions techniques"],
+      ["2", "monoplaces Formula Student"],
+      ["5", "ans d'expérience en atelier"],
     ],
     secFeatured: {
       title: "Travaux en vedette", count: "3 / 12",
@@ -303,10 +303,10 @@ const CONTENT = {
       alt: "Portrait of Gilles Mariethoz",
     },
     stats: [
-      ["12", "documented engineering projects, from the workshop to the lab"],
-      ["5", "technical awards and competitions won, including two for the Bachelor thesis"],
-      ["2", "Formula Student cars — HV2 / HV3 certified, cleared to work on high-voltage systems"],
-      ["5", "years on the shop floor as a polymechanic apprentice before university"],
+      ["12", "documented projects"],
+      ["5", "technical distinctions"],
+      ["2", "Formula Student cars"],
+      ["5", "years of workshop experience"],
     ],
     secFeatured: {
       title: "Selected work", count: "3 / 12",
@@ -393,10 +393,10 @@ const CONTENT = {
       alt: "Porträt von Gilles Mariethoz",
     },
     stats: [
-      ["12", "dokumentierte Ingenieurprojekte, von der Werkstatt bis ins Labor"],
-      ["5", "technische Auszeichnungen und gewonnene Wettbewerbe, davon zwei für die Bachelorarbeit"],
-      ["2", "Formula-Student-Fahrzeuge — HV2 / HV3 zertifiziert, befugt für Arbeiten an Hochspannungssystemen"],
-      ["5", "Jahre Werkstatt als Polymechaniker-Lernender vor dem Studium"],
+      ["12", "dokumentierte Projekte"],
+      ["5", "technische Auszeichnungen"],
+      ["2", "Formula-Student-Fahrzeuge"],
+      ["5", "Jahre Werkstatterfahrung"],
     ],
     secFeatured: {
       title: "Ausgewählte Arbeiten", count: "3 / 12",
