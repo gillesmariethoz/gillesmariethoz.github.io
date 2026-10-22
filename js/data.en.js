@@ -382,7 +382,7 @@ const PROJECTS = [
       },
       {
         title: "Test protocol and results",
-        text: "As no standard covers the validation of this type of prosthesis, a test protocol was derived from existing standards, with embedding in cement and quasi-static cyclic loading. The tests show an actual stiffness 16 to 18 times higher than the numerical predictions, a gap attributed to the compliance of the setup, idealized boundary conditions, and printing defects.",
+        text: "As no standard covers the validation of this type of prosthesis, a test protocol was derived from existing standards, with embedding in cement and quasi-static cyclic loading. The measured stiffness was 16 to 18 times higher than predicted. Analysis of this gap highlighted the influence of test-rig compliance, idealized boundary conditions and additive-manufacturing defects; these findings now guide the next model iterations.",
       },
       {
         title: "Tool developed",

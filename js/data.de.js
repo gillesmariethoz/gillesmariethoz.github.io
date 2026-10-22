@@ -382,7 +382,7 @@ const PROJECTS = [
       },
       {
         title: "Testprotokoll und Ergebnisse",
-        text: "Da keine Norm die Validierung dieser Art von Prothese abdeckt, wurde ein Testprotokoll aus bestehenden Normen abgeleitet, mit Einbettung in Zement und quasi-statischer zyklischer Belastung. Die Tests zeigen eine tatsächliche Steifigkeit, die 16- bis 18-mal höher ist als die numerischen Vorhersagen, eine Abweichung, die der Nachgiebigkeit des Aufbaus, den idealisierten Randbedingungen und Druckfehlern zugeschrieben wird.",
+        text: "Da keine Norm die Validierung dieser Art von Prothese abdeckt, wurde ein Testprotokoll aus bestehenden Normen abgeleitet, mit Einbettung in Zement und quasi-statischer zyklischer Belastung. Die gemessene Steifigkeit lag 16- bis 18-mal über der Vorhersage. Die Analyse dieser Abweichung zeigte den Einfluss der Nachgiebigkeit des Prüfaufbaus, idealisierter Randbedingungen und additiver Fertigungsfehler; diese Erkenntnisse bestimmen die nächsten Modelliterationen.",
       },
       {
         title: "Entwickeltes Werkzeug",

@@ -415,7 +415,7 @@ const PROJECTS = [
       },
       {
         title: "Protocole d'essai et résultats",
-        text: "Aucune norme ne couvrant la validation de ce type de prothèse, un protocole d'essai a été dérivé des normes existantes, avec enrobage dans un ciment et chargement quasi-statique cyclique. Les essais montrent une rigidité réelle 16 à 18 fois supérieure aux prédictions numériques, écart attribué à la compliance du montage, aux conditions limites idéalisées et aux défauts d'impression.",
+        text: "Aucune norme ne couvrant la validation de ce type de prothèse, un protocole d'essai a été dérivé des normes existantes, avec enrobage dans un ciment et chargement quasi-statique cyclique. La rigidité mesurée s'est révélée 16 à 18 fois supérieure aux prédictions. L'analyse de cet écart a mis en évidence l'influence de la compliance du montage, des conditions limites idéalisées et des défauts liés à la fabrication additive ; ces résultats orientent directement les prochaines itérations du modèle.",
       },
       {
         title: "Outil développé",
