@@ -126,8 +126,8 @@ function pickMulti(value, langIndex) {
 const RESULTS = {
   fr: {
     "tpms": {
-      val: "2 architectures retenues",
-      txt: "cinq architectures TPMS générées, quatre caractérisées expérimentalement en Ti6Al4V — Spherene écartée en cours d'étude — et deux retenues pour la conception : Gyroid et Split-P. Protocole d'essai dérivé faute de norme existante ; rigidité mesurée 16 à 18 × supérieure aux prédictions numériques.",
+      val: "Note maximale",
+      txt: "Prix du public du Pitch Challenge à Monthey et Prix SCINTILLA AG pour la qualité du travail lors de la remise des diplômes.",
     },
     "levitation-magnetique": {
       val: "Dispositif fonctionnel",
@@ -140,8 +140,8 @@ const RESULTS = {
   },
   en: {
     "tpms": {
-      val: "2 architectures selected",
-      txt: "five TPMS architectures generated, four characterised experimentally in Ti6Al4V — Spherene dropped along the way — and two retained for the design: Gyroid and Split-P. Test protocol derived from scratch, no standard existing; measured stiffness 16 to 18 × above the numerical predictions.",
+      val: "Maximum grade",
+      txt: "People's Choice Award at the Pitch Challenge in Monthey and the SCINTILLA AG Award for the quality of the work at graduation.",
     },
     "levitation-magnetique": {
       val: "Working device",
@@ -154,8 +154,8 @@ const RESULTS = {
   },
   de: {
     "tpms": {
-      val: "2 Architekturen ausgewählt",
-      txt: "fünf TPMS-Architekturen generiert, vier experimentell in Ti6Al4V charakterisiert — Spherene im Verlauf verworfen — und zwei für die Konstruktion ausgewählt: Gyroid und Split-P. Prüfprotokoll selbst abgeleitet, da keine Norm existiert; gemessene Steifigkeit 16 bis 18 × über den numerischen Vorhersagen.",
+      val: "Bestnote",
+      txt: "Publikumspreis der Pitch Challenge in Monthey und SCINTILLA AG-Preis für die Qualität der Arbeit bei der Diplomfeier.",
     },
     "levitation-magnetique": {
       val: "Funktionsfähiger Aufbau",
@@ -214,7 +214,7 @@ const CONTENT = {
     },
     stats: [
       ["12", "projets d'ingénierie documentés, de l'atelier au laboratoire"],
-      ["3", "concours d'ingénierie remportés face aux autres équipes"],
+      ["5", "distinctions et concours techniques remportés, dont deux pour le travail de Bachelor"],
       ["2", "monoplaces Formula Student — certifié HV2 / HV3, habilité à intervenir sur les systèmes haute tension"],
       ["5", "ans d'atelier en apprentissage polymécanicien avant l'école"],
     ],
@@ -236,7 +236,7 @@ const CONTENT = {
       toolsLabel: "Outils",
       rows: [
         ["2026 →", "Master en génie mécanique", "HES-SO — dans la continuité du Bachelor Systèmes industriels"],
-        ["2023 — 2026", "Bachelor Systèmes industriels", "HES-SO Valais — orientation Design & Materials · conception, simulation, matériaux avancés"],
+        ["2023 — 2026", "Bachelor Systèmes industriels", "HES-SO Valais — orientation Design & Materials · note maximale au travail de Bachelor · Prix du public et Prix SCINTILLA AG"],
         ["2022 — 2023", "Bachelor Génie mécanique", "HEPIA, Genève — première année, concours Robots"],
         ["2020 — 2022", "Technicien ES en génie mécanique", "ETML-ES, Lausanne — major de promotion en matières techniques"],
         ["2015 — 2020", "CFC Polymécanicien", "EPTMS, en apprentissage chez Muller-Production SA — collaboration poursuivie après le diplôme"],
@@ -304,7 +304,7 @@ const CONTENT = {
     },
     stats: [
       ["12", "documented engineering projects, from the workshop to the lab"],
-      ["3", "engineering contests won against the other teams"],
+      ["5", "technical awards and competitions won, including two for the Bachelor thesis"],
       ["2", "Formula Student cars — HV2 / HV3 certified, cleared to work on high-voltage systems"],
       ["5", "years on the shop floor as a polymechanic apprentice before university"],
     ],
@@ -326,7 +326,7 @@ const CONTENT = {
       toolsLabel: "Tools",
       rows: [
         ["2026 →", "Master in Mechanical Engineering", "HES-SO — continuing from the Bachelor in Industrial Systems"],
-        ["2023 — 2026", "Bachelor in Industrial Systems", "HES-SO Valais — Design & Materials · design, simulation, advanced materials"],
+        ["2023 — 2026", "Bachelor in Industrial Systems", "HES-SO Valais — Design & Materials · Bachelor thesis awarded the maximum grade · People's Choice and SCINTILLA AG Awards"],
         ["2022 — 2023", "Bachelor in Mechanical Engineering", "HEPIA, Geneva — first year, Robot Contest"],
         ["2020 — 2022", "Technician ES in Mechanical Engineering", "ETML-ES, Lausanne — top of the class in technical subjects"],
         ["2015 — 2020", "Polymechanic apprenticeship (CFC)", "EPTMS, apprenticed at Muller-Production SA — collaboration continued after graduating"],
@@ -394,7 +394,7 @@ const CONTENT = {
     },
     stats: [
       ["12", "dokumentierte Ingenieurprojekte, von der Werkstatt bis ins Labor"],
-      ["3", "gewonnene Ingenieurwettbewerbe gegen die anderen Teams"],
+      ["5", "technische Auszeichnungen und gewonnene Wettbewerbe, davon zwei für die Bachelorarbeit"],
       ["2", "Formula-Student-Fahrzeuge — HV2 / HV3 zertifiziert, befugt für Arbeiten an Hochspannungssystemen"],
       ["5", "Jahre Werkstatt als Polymechaniker-Lernender vor dem Studium"],
     ],
@@ -416,7 +416,7 @@ const CONTENT = {
       toolsLabel: "Werkzeuge",
       rows: [
         ["2026 →", "Master Maschinenbau", "HES-SO — in Fortsetzung des Bachelors Industrielle Systeme"],
-        ["2023 — 2026", "Bachelor Industrielle Systeme", "HES-SO Valais — Design & Materials · Konstruktion, Simulation, moderne Werkstoffe"],
+        ["2023 — 2026", "Bachelor Industrielle Systeme", "HES-SO Valais — Design & Materials · Bachelorarbeit mit Bestnote · Publikums- und SCINTILLA AG-Preis"],
         ["2022 — 2023", "Bachelor Maschinenbau", "HEPIA, Genf — erstes Jahr, Roboterwettbewerb"],
         ["2020 — 2022", "Techniker HF Maschinenbau", "ETML-ES, Lausanne — Jahrgangsbester in den technischen Fächern"],
         ["2015 — 2020", "Polymechaniker-Lehre (EFZ)", "EPTMS, Lehre bei Muller-Production SA — Zusammenarbeit nach dem Abschluss fortgesetzt"],

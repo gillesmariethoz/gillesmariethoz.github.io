@@ -57,6 +57,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.scroll-progress {
+  position: fixed; z-index: 50; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--acc); transform: scaleX(0); transform-origin: left center;
+  pointer-events: none; will-change: transform;
+}
+
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .65s ease var(--reveal-delay, 0ms), transform .65s cubic-bezier(.2,.75,.25,1) var(--reveal-delay, 0ms);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
 img { display: block; max-width: 100%; }
 
 a { color: var(--acc-d); text-decoration: none; }
@@ -156,6 +168,8 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   background-size: 34px 34px;
   -webkit-mask-image: linear-gradient(#000 55%, transparent);
   mask-image: linear-gradient(#000 55%, transparent);
+  transform: translate(calc(var(--mx, 0) * 10px), calc(var(--my, 0) * 10px));
+  transition: transform .2s ease-out;
 }
 .hero-in {
   position: relative;
@@ -199,15 +213,18 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
 .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 20%; }
 
 /* ── Plaque de chiffres ────────────────────────────────── */
-.plate { margin-top: 96px; }
+.plate { margin-top: 72px; }
 .plate-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.plate-cell { padding: 30px 28px; border-right: 1px solid var(--line); }
+.plate-cell {
+  display: grid; grid-template-columns: 54px minmax(0, 1fr); align-items: center; gap: 16px;
+  padding: 20px 22px; border-right: 1px solid var(--line);
+}
 .plate-cell:last-child { border-right: 0; }
 .plate-num {
-  font-family: var(--font-h); font-weight: 600; font-size: 54px;
+  font-family: var(--font-h); font-weight: 600; font-size: 42px;
   line-height: 1; letter-spacing: -.02em;
 }
-.plate-txt { font-size: 12.5px; line-height: 1.45; color: var(--mut-2); margin-top: 10px; }
+.plate-txt { font-size: 12px; line-height: 1.4; color: var(--mut-2); margin: 0; }
 
 /* ── Titres de section ─────────────────────────────────── */
 .sec-pad { padding-top: 118px; }
@@ -235,10 +252,41 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
 .feature p { font-size: 16px; line-height: 1.6; color: color-mix(in srgb, var(--ink) 75%, transparent); margin: 0 0 26px; text-wrap: pretty; }
 .feature-fig .frame { background: var(--surface); }
 .feature-fig img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.feature-fig .frame, .proj-hero, .technical-gallery .frame { overflow: hidden; }
+.feature-fig img, .proj-hero img, .technical-gallery img {
+  transition: transform .65s cubic-bezier(.2,.75,.25,1), filter .35s ease;
+}
+.feature:hover .feature-fig img, .proj-hero:hover img, .technical-gallery figure:hover img {
+  transform: scale(1.025); filter: contrast(1.03);
+}
 
 .result { border-left: 2px solid var(--acc); padding: 4px 0 4px 20px; margin: 0 0 26px; }
 .result-val { font-family: var(--font-h); font-weight: 600; font-size: 34px; line-height: 1; letter-spacing: -.015em; }
 .result-txt { font-size: 14px; line-height: 1.5; color: var(--mut-2); margin-top: 8px; }
+
+/* ── Distinctions et documentation Bachelor ───────────── */
+.award-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border: 1px solid color-mix(in srgb, var(--acc) 45%, var(--line));
+  margin: 28px 0 30px; background: color-mix(in srgb, var(--acc) 5%, transparent);
+}
+.award-card { padding: 22px 24px; border-right: 1px solid var(--line); }
+.award-card:last-child { border-right: 0; }
+.award-value {
+  display: block; margin-top: 6px; font-family: var(--font-h); font-weight: 600;
+  font-size: clamp(25px, 2.8vw, 38px); line-height: 1.05; color: var(--ink);
+}
+.award-note { display: block; margin-top: 8px; font-size: 12px; line-height: 1.45; color: var(--mut-2); }
+.award-card a { color: inherit; }
+.award-card a:hover .award-value { color: var(--acc-d); }
+
+.technical-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 32px; }
+.project-gallery { margin: 34px 0 72px; }
+.technical-gallery figure { margin: 0; min-width: 0; }
+.technical-gallery img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.technical-gallery .figcap { align-items: flex-start; }
+.technical-gallery .figcap span:first-child { max-width: 70%; }
+.technical-gallery .figcap span:last-child { text-align: right; white-space: nowrap; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
 .tag {
@@ -324,22 +372,32 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
 .proj-hero { margin-top: 56px; }
 .proj-hero img { width: 100%; aspect-ratio: 21/9; object-fit: cover; }
 
-.spec { margin-top: 76px; }
-.spec-title { padding: 16px 24px; border-bottom: 1px solid var(--line); }
-.spec-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.spec-cell { padding: 22px 24px; border-right: 1px solid var(--line); }
-.spec-grid .spec-cell:nth-child(4n) { border-right: 0; }
-.spec-grid .spec-cell:last-child { border-right: 0; }
-.spec-grid .spec-cell:nth-child(n+5) { border-top: 1px solid var(--line); }
-/* Dernière rangée incomplète : les cases restantes s'étalent, pas de vide.
-   Uniquement sur la grille à 4 colonnes — en dessous, la grille passe à
-   2 colonnes et se remplit d'elle-même. */
-@media (min-width: 1081px) {
-  .spec-grid[data-cells="5"] .spec-cell:nth-child(5) { grid-column: span 4; }
-  .spec-grid[data-cells="6"] .spec-cell:nth-child(n+5) { grid-column: span 2; }
-  .spec-grid[data-cells="7"] .spec-cell:nth-child(7) { grid-column: span 2; }
+.spec { margin-top: 76px; border: 0; }
+.spec > .corner { display: none; }
+.spec-title {
+  display: flex; align-items: center; gap: 18px;
+  padding: 0 0 14px; border-bottom: 1px solid color-mix(in srgb, var(--acc) 55%, var(--line));
+  color: var(--acc-d);
 }
-.spec-val { font-family: var(--font-h); font-weight: 600; font-size: 21px; line-height: 1.2; text-wrap: pretty; }
+.spec-title::after { content: "DATA"; margin-left: auto; color: var(--mut); }
+.spec:has(.spec-grid[data-cells="4"]) .spec-title::after { content: "DATA / 04"; }
+.spec:has(.spec-grid[data-cells="6"]) .spec-title::after { content: "DATA / 06"; }
+.spec:has(.spec-grid[data-cells="7"]) .spec-title::after { content: "DATA / 07"; }
+.spec:has(.spec-grid[data-cells="8"]) .spec-title::after { content: "DATA / 08"; }
+.spec-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  column-gap: 34px;
+}
+.spec-cell {
+  position: relative; min-height: 108px; padding: 19px 0 22px;
+  border-top: 1px solid var(--line);
+}
+.spec-cell::before {
+  content: ""; position: absolute; top: -1px; left: 0;
+  width: 28px; height: 1px; background: var(--acc);
+}
+.spec-cell .lbl { display: block; margin-bottom: 13px; }
+.spec-val { font-family: var(--font-h); font-weight: 600; font-size: 24px; line-height: 1.15; text-wrap: pretty; }
 .spec-val.acc { color: var(--acc-d); }
 .spec-txt { font-size: 14.5px; line-height: 1.45; color: color-mix(in srgb, var(--ink) 78%, transparent); }
 
@@ -387,12 +445,9 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   :root { --gut: 28px; }
   .hero-in, .cv, .proj-head { grid-template-columns: 1fr; gap: 44px; }
   .hero-photo { max-width: 380px; }
-  .plate-grid, .spec-grid { grid-template-columns: repeat(2, 1fr); }
+  .plate-grid { grid-template-columns: repeat(2, 1fr); }
   .plate-cell:nth-child(2n) { border-right: 0; }
   .plate-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .spec-grid .spec-cell:nth-child(2n) { border-right: 0; }
-  .spec-grid .spec-cell:nth-child(n+5) { border-top: 0; }
-  .spec-grid .spec-cell:nth-child(n+3) { border-top: 1px solid var(--line); }
   /* Sur mobile/tablette, on annule l'alternance "miroir" du bureau :
      le titre passe toujours avant la photo, dans le même ordre pour
      toutes les cartes. */
@@ -450,15 +505,27 @@ h1, h2, h3 { font-family: var(--font-h); font-weight: 600; margin: 0; letter-spa
   .features { gap: 64px; }
   .list-row { grid-template-columns: 40px 92px minmax(0, 1fr); gap: 16px; }
   .list-blurb, .list-arrow { display: none; }
-  .contacts, .titleblock, .spec-grid, .pair, .prevnext { grid-template-columns: 1fr; }
-  .contact-cell, .titleblock div, .spec-cell, .pair > div, .prevnext a { border-right: 0; border-bottom: 1px solid var(--line); }
-  .plate-cell { padding: 20px 18px; }
-  .plate-num { font-size: 38px; }
-  .spec-grid .spec-cell { border-top: 0; border-bottom: 1px solid var(--line); }
-  .spec-grid .spec-cell:last-child { border-bottom: 0; }
+  .contacts, .titleblock, .pair, .prevnext { grid-template-columns: 1fr; }
+  .contact-cell, .titleblock div, .pair > div, .prevnext a { border-right: 0; border-bottom: 1px solid var(--line); }
+  .plate-grid { grid-template-columns: 1fr; }
+  .plate-cell { padding: 17px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .plate-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .plate-cell:last-child { border-bottom: 0; }
+  .plate-num { font-size: 36px; }
+  .spec-grid { grid-template-columns: 1fr; }
+  .spec-cell { min-height: 0; }
   .prevnext a:last-child { text-align: left; border-bottom: 0; }
+  .award-strip, .technical-gallery { grid-template-columns: 1fr; }
+  .award-card { border-right: 0; border-bottom: 1px solid var(--line); }
+  .award-card:last-child { border-bottom: 0; }
   .tl-row, .tools { grid-template-columns: 1fr; gap: 6px; }
   .cartouche-head { padding: 32px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-grid-bg, .feature-fig img, .proj-hero img, .technical-gallery img { transition: none; transform: none; }
 }
 
 @media print {
