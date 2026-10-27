@@ -1,0 +1,13 @@
+/* Commandes inspirées des cartouches du portfolio. */
+.project-filter { display:flex; align-items:center; flex-wrap:wrap; gap:12px 16px; padding:18px 0 20px; border-top:1px solid var(--line); }
+.filter-label { margin:0 8px 0 0; }
+.filter-buttons { display:flex; flex-wrap:wrap; gap:7px; }
+.filter-button { cursor:pointer; font:500 11px var(--font-b); letter-spacing:.06em; border:1px solid var(--line); background:transparent; color:var(--ink); padding:9px 12px; transition:background .2s,color .2s,border-color .2s; }
+.filter-button:hover { border-color:var(--acc); color:var(--acc); }
+.filter-button[aria-pressed="true"] { background:var(--acc); border-color:var(--acc); color:var(--on-acc); }
+.filter-count { margin:0 0 0 auto; }
+.list-row[hidden] { display:none !important; }
+section[id], footer [id] { scroll-margin-top:80px; }
+@media(max-width:600px){.project-filter{align-items:flex-start; flex-direction:column; gap:10px}.filter-count{margin:0}.filter-button{min-height:40px}}
+@media(prefers-reduced-motion:reduce){.filter-button{transition:none}}
+@media(max-width:880px){.nav-in{padding-left:var(--gut);padding-right:var(--gut)}section[id],footer [id]{scroll-margin-top:125px}}
